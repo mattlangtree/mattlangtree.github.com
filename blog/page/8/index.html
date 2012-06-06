@@ -1,0 +1,797 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Matt Langtree</title>
+  <meta name="author" content="Matt Langtree">
+
+  
+  <meta name="description" content="I have created a basic apple script that offers the user feedback about the
+progress of mounting your network samba shares on Leopard. To use this &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mattlangtree.com.au/blog/page/8">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Matt Langtree" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4364552-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Matt Langtree</a></h1>
+</hgroup>
+
+</header>
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mattlangtree.com.au" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about-matt/">About Matt</a></li>
+  <li><a href="/contact/">Contact</a></li>
+  <li><a href="/projects/">Projects</a></li>
+</ul>
+
+</nav> -->
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/08/05/leopard-mount-samba-shares/">Leopard Mount Samba Shares</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-08-05T15:42:21+10:00" pubdate data-updated="true">Aug 5<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I have created a basic apple script that offers the user feedback about the
+progress of mounting your network samba shares on Leopard.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2008/08/picture-31.png" alt="" /></p>
+
+<p>To use this script, post it into Script Editor, update the relevant server and
+share variables.</p>
+
+<p>Click the Run button to test the script out.</p>
+
+<p>Once you are happy with your new script, choose File > Save.. and choose
+Application as the File Format, and check &#8216;Run Only&#8217; from the options in the
+Save dialog box.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>tell application <span class="s2">&quot;Finder&quot;</span>
+</span><span class='line'>  activate
+</span><span class='line'>  <span class="nb">set </span>theSharesCount to 3
+</span><span class='line'>  try
+</span><span class='line'>     display dialog <span class="s2">&quot;Mounting Share 1 of &quot;</span> &amp; theSharesCount giving up after 1 with icon   note
+</span><span class='line'>     mount volume <span class="s2">&quot;cifs://WORKGROUP;matt@workserver/websites&quot;</span>
+</span><span class='line'>  end try
+</span><span class='line'>  try
+</span><span class='line'>     display dialog <span class="s2">&quot;Mounting Share 2 of &quot;</span> &amp; theSharesCount giving up after 1 with icon note
+</span><span class='line'>     mount volume <span class="s2">&quot;cifs://WORKGROUP;matt@workserver/source&quot;</span>
+</span><span class='line'>  end try
+</span><span class='line'>  try
+</span><span class='line'>    display dialog <span class="s2">&quot;Mounting Share 3 of &quot;</span> &amp; theSharesCount giving up after 1 with icon note
+</span><span class='line'>    mount volume <span class="s2">&quot;cifs://WORKGROUP;matt@workserver/admin&quot;</span>
+</span><span class='line'>
+</span><span class='line'>  end try
+</span><span class='line'>
+</span><span class='line'>end tell
+</span></code></pre></td></tr></table></div></figure>
+
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/28/macbook-pro-17-4-free-surprises/">MacBook Pro 17&#8221; + 4 FREE Surprises!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-28T21:14:29+10:00" pubdate data-updated="true">Jul 28<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Yesterday I called up apple support asking them if I could choose a non-glossy
+display for the MacBook Pro (MBP) 17&#8221; that I wanted to order from the Mac
+Refurbished store.</p>
+
+<p><a href="http://mattlangtree.com.au/wp-%0Acontent/uploads/2008/07/design_display_17led20080226.jpg"><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/design_display_17led20080226-300x166.jpg" alt="" /></a></p>
+
+<p>The very helpful lady sincerely apologised and said &#8220;the glossy and non-glossy
+MBPs are all stored in the same spot, and we can&#8217;t open them to find out which
+one we are sending you&#8221;.</p>
+
+<p>Despite having to brave the possibility of receiving a glossy display, I went
+ahead and ordered the MBP 17&#8221; rather than taking the risk of ordering from a
+random seller on eBay.</p>
+
+<p>So, here is the link to the product that I ordered:
+http://store.apple.com/au/product/FA897X/A</p>
+
+<p>2.4Ghz MBP 17&#8221; 1680x1050, 5400rpm 160GB HDD(and possibly a glossy or non-
+glossy display, it&#8217;s completely random)</p>
+
+<p>And here is what I got:</p>
+
+<p>2.6Ghz MBP 17&#8221; 1920x1200, 7200rpm 200GB w/ Matte display</p>
+
+<p><a href="http://mattlangtree.com.au/wp-content/uploads/2008/07/img_0226.jpg"><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/img_0226-225x300.jpg" alt="" /></a>As any
+nerd would attest, getting a</p>
+
+<p>1) CPU upgrade (2.4 ->2.6) 2) display resolution upgrade (1680x1050 ->
+1920x1200) 3) HDD capacity (160GB -> 200GB ) 4) HDD speed upgrade (5400rpm
+->7200rpm)</p>
+
+<p>is an extremely lucky surprise.</p>
+
+<p>Just as a side note, every one of those 4 upgrades is an added expense on top
+of the base 17&#8221; MBP.</p>
+
+<p>I am an extremely happy chappy today. :-)</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/26/design-mach-two/">Design - Mach II</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-26T10:52:27+10:00" pubdate data-updated="true">Jul 26<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m back at it again. A new design for MJ Media.</p>
+
+<p>I&#8217;ve taken <em>some</em> of the feedback from the folks that saw the first design,
+and have created a second design.</p>
+
+<p><a href="http://mattlangtree.com.au/wp-content/uploads/2008/07/m-mockup-mjmedia-31.jpg"><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/m-mockup-mjmedia-31-300x269.jpg" alt="" /></a></p>
+
+<p>Some of the other suggestions that I received will be incorporated into a
+third design.</p>
+
+<p>Any comments on this design are welcome.</p>
+
+<hr />
+
+<p><a href="http://www.mjmedia.com.au/">MJ Media</a> is a registered Australian Business
+offering <a href="http://www.mjmedia.com.au">Web Programming and Software Development</a>
+services in Australia.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/23/mjmedia-com-au-gets-new-design/">Baby&#8217;s Got a Brand New Bag! (Updated X1)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-23T08:25:49+10:00" pubdate data-updated="true">Jul 23<span>rd</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.mjmedia.com.au/">MJ Media</a> is a registered Australian Business
+primarily offering <a href="http://www.mjmedia.com.au">Web Programming services</a> in
+Queensland.</p>
+
+<p>MJ Media is a banner name for the projects that I work on, and a legally
+accountable entity for on any web design or programming work I perform outside
+of my daily job.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/picture-11-300x252.png" alt="MJ Media Splash Page" />](http://www.mjmedia.com.au)</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/m-mockup-%0Amjmedia-2-300x225.jpg" alt="Mockup/Concept design for new MJ Media website" />](http://mattlangtree.com.au/wp-/uploads/2008/07/m-mockup-mjmedia-2.jpg)</p>
+
+<p>This new design features the <a href="http://www.sequelpro.com/">Sequel Pro</a> project,
+that <a href="http://abhibeckert.com/">Abhi Beckert</a> and <a href="http://aadesign.ausdatahost.com/blog/">Ben
+Perry</a> have been working on.</p>
+
+<p>I would appreciate any constructive feedback.
+<a href="http://mattlangtree.com.au/wp-login.php?action=register">Register</a>
+(registration emails aren&#8217;t sending) and leave me any comments or ideas.</p>
+
+<p>Update:  Registration Emails should be working again.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/15/wordpress-2-6/">Wordpress Releases Feature-rich 2.6 Version of Blogging Software (Updated X2)</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-15T21:16:47+10:00" pubdate data-updated="true">Jul 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The new version 2.6 release from the folks at Wordpress comes as a suprise,
+arriving a month ahead of schedule.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2008/07/wordpresslogo-300x300.jpg" alt="Wordpress 2.6" /> The new blogging software touts the following new
+features:</p>
+
+<ul>
+<li>Post Revisions: Wiki-like tracking of edits - Press This! Button (now extracts youtube video code/flickr source for easy image/video embedding in posts) - Google Gears support: Speed up your blogging experience by caching Javascript/CSS on your local computer - Theme Previews: Preview a theme running on your site - without having the public blog appearance change<br/>
+Some other new features, which I&#8217;m glad to see are: - Full SSL support - Image
+Captions - Custom wp-config.php location - for &#8220;clean&#8221; svn checkouts.</li>
+</ul>
+
+
+<p>The press release is available here:
+http://wordpress.org/development/2008/07/wordpress-26-tyner/</p>
+
+<p>Thanks to <a href="http://www.adamwolfs.com/">Adam Wolfs</a>, for the heads up about this
+new release!</p>
+
+<p>UPDATE: I&#8217;ve installed Wordpress 2.6 on this domain, using the SVN
+installation method. I&#8217;m happy to announce that the process for an SVN
+installation is mostly trivial and the site was only down for about 30
+seconds.</p>
+
+<p>UPDATE 2: The admin area does seem to be a little snappier at times, after
+installing Google gears on Firefox 3.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/01/flow-ftp-updated-to-102/">Flow FTP Updated to 1.0.2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-01T23:05:59+10:00" pubdate data-updated="true">Jul 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>The folks over at <a href="http://extendmac.com/flow/">Extendmac</a> have released the
+latest instalment (version 1.0.2) of their new <a href="http://extendmac.com/flow/">Flow FTP
+Client</a>.</p>
+
+<p>The update includes the following release notes:</p>
+
+<p>Fixes for: <code>- FTP URLs - Editor Crashing - Reload, action, and search toolbar
+items - (S)FTP Directory listings - Bookmark folder creation - Droplets -
+Duplication - Deletion - Info View - Source List-related crashes - Setting
+permissions on upload - Autosaving (backing up) of files in the internal
+editor. - Concurrency/Threading</code></p>
+
+<p>Changes to: <code>- "Permissions" section of InfoView is now un-editable, and
+displayed in symbolic notation instead of an octal. - There is now a growl
+notification for "File Saved," when editing changes (both internal/external)
+are saved.</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/07/01/apple-releases-mac-os-x-1054/">Apple Releases Mac OS X 10.5.4</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-07-01T22:45:26+10:00" pubdate data-updated="true">Jul 1<span>st</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Apple has released Mac OS X 10.5.4 as an upgrade via Software Update.</p>
+
+<p>The update includes the following release notes: <code>The 10.5.4 Update is
+recommended for all users running Mac OS X Leopard and includes general
+operating system fixes that enhance the stability, compatibility and security
+of your Mac.</code></p>
+
+<p><code></code></p>
+
+<p><code>For detailed information on this update, please visit this website:[http://support.apple.com/kb/HT1994](http://www.macrumors.com/c.php?u=http%3A%2F%2Fsupport.apple.com%2Fkb%2FHT1994&amp;t=1214915403). For detailed information on security updates, please visit this website:[http://support.apple.com/kb/HT1222](http://support.apple.com/kb/HT1222).</code></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/06/24/australian-itunes-store-receives-tv-shows/">Australian iTunes Store Receives TV Shows</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-06-24T03:24:50+10:00" pubdate data-updated="true">Jun 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In a predicted move from media giant Apple Co., the Australian iTunes store
+now contains TV shows.</p>
+
+<p><img src="http://mattlangtree.com/wp-content/uploads/2008/06/australian-itunes-tv-shows.jpg" alt="TV Shows in Australia available on iTunes" /></p>
+
+<p>Australian iTunes users are now greeted with a selection from Australian
+networks, ABC and Nine Network along with US Movie studios ABC Studios, Disney
+Channel and MTV.</p>
+
+<p>Episodes are priced at $2.99 each and are available through the iTunes
+software available for Mac and Windows. The TV shows contain DRM (Digital
+Rights Management) and are able to be played back on computers that have the
+iTunes software installed.</p>
+
+<p>TV shows can be synched to the latest generation of Apple&#8217;s iPod music players
+including the iPod Nano, iPod Touch and the iPod Classic.</p>
+
+<p>The news of TV shows on the Australian iTunes store coincides with other
+recent news that Australia is to be one of the first of 20+ countries to
+receive the <a href="http://mattlangtree.com/2008-06-10/apple-releases-iphone-in-australia-optus-vodafone-to-carry-iphon.html">new iPhone 3G</a>.</p>
+
+<p>Source: <a href="http://www.macrumors.com/2008/06/24/television-shows-now-available-on-itunes-australia/">MacRumors.com</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/06/19/textmate-extension-that-learns-from-xcode/">Textmate Extension That Learns From XCode</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-06-19T22:40:02+10:00" pubdate data-updated="true">Jun 19<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I found a cool plugin for Textmate today, it &#8220;provides Xcode-like project
+window interface without drawer.&#8221;</p>
+
+<p>The plugin was originally written by <a href="http://hetima.com/">Hetima</a>, but the
+project was recently picked up by  <a href="http://jannisleidel.com/">Jannis Leidel</a>
+who fixed some of the bugs in it.</p>
+
+<p><a href="http://mattlangtree.com.au/wp-content/uploads/2008/06/missingdrawer-screenshot.png"><img src="http://codematt.com/wp-content/uploads/2008/06/missingdrawer-screenshot-300x216.png" alt="" /></a></p>
+
+<p>The Textmate plug-in can be found here: <a href="http://code.google.com/p/textmate-missingdrawer/">http://code.google.com/p/textmate-missingdrawer/</a></p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/06/11/optus-iphone-3g-prices-leaked/">Optus iPhone 3G Prices Leaked</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-06-11T21:06:10+10:00" pubdate data-updated="true">Jun 11<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p><a href="http://www.gizmodo.com.au/2008/06/exclusive_optus_iphone_pricing_details.html">Gizmodo Australia has published</a> prices that they believe Optus will be
+charging for the new iPhone 3G in Australia.</p>
+
+<p><a href="http://www.gizmodo.com.au/2008/06/exclusive_optus_iphone_pricing_details.html"></a><a href="http://www.gizmodo.com.au/2008/06/exclusive_optus_iphone_pricing_details.html"><img src="http://mattlangtree.com/wp-content/uploads/2008/06/scancrop2.jpg" alt="" /></a></p>
+
+<p>Gizmodo claims that Optus Australia will be offering a $79 cap which includes
+1GB/month of data and $300 worth of calls and SMS and a $99 cap includes
+3GB/month of data and $400 worth of calls and SMS.</p>
+
+<p>Prices for the iPhone 3G haven&#8217;t been announced publicly by Optus yet, so we
+cannot be certain that this is all that Optus will bring to the table.</p>
+
+<p>A websites for registering your interest in the iPhone 3G has been set up by
+<a href="http://mattlangtree.com/2008-06-11/optus-vodafone-not-ready-for-iphone.html">Optus Australia</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/blog/page/9/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/blog/page/7/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    
+<section>
+  <ul id="main_links">
+	  <li><a href="/about-matt/">About Me</a></li>
+	  <li><a href="/contact/">Contact</a></li>
+	  <li><a href="/projects/">Projects</a></li>
+	  <li><a href="/blog/archives">Archives</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/01/14/what-drives-me-to-develop-software/">What drives me to develop software</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/11/links-january-2010/">Some people write newsletters. I collect links.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/15/erd-diagrams-from-sequel-pro/">Entity Relationship Diagrams from Sequel Pro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion/">Self-signed SSL Certificate on Mac OS X Lion</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/05/uitableview-section-header-draw-issue-in-ios5/">UITableView section header draw issue in iOS5</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/mattlangtree">@mattlangtree</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mattlangtree',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("mattlangtree", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/mattlangtree" class="twitter-follow-button" data-show-count="false">Follow @mattlangtree</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Matt Langtree -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

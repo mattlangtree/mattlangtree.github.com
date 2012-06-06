@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Mac OS X Hints | Matt Langtree]]></title>
+  <link href="http://mattlangtree.com.au/blog/categories/mac-os-x-hints/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.com.au/"/>
+  <updated>2012-01-14T23:28:49+11:00</updated>
+  <id>http://mattlangtree.com.au/</id>
+  <author>
+    <name><![CDATA[Matt Langtree]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL Lion not working]]></title>
+    <link href="http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working/"/>
+    <updated>2011-08-02T02:12:24+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working</id>
+    <content type="html"><![CDATA[<p>If you are like me you used the default MySQL, Apache and PHP provided with
+Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for you.</p>
+
+<p>These are the steps that I followed to get MySQL working on Lion:</p>
+
+<ol>
+<li>Update php.ini - enable all mysql extensions (because I use Zend, wordpress and other frameworks)</li>
+<li>Make sure MySQL is started and you can connect to it in <a href="http://www.sequelpro.com/">Sequel Pro</a></li>
+<li>Go to Database > Server Variables and search for 'socket'. It will most likely be set to '/tmp/mysql.sock'</li>
+<li>Update the socket locations for MySQL in your php.ini to /tmp/mysql.sock</li>
+</ol>
+
+
+<p>Before:
+<code>sh
+`pdo_mysql.default_socket=/var/mysql/mysql.sock mysql.default_socket =
+/var/mysql/mysql.sock mysqli.default_socket = /var/mysql/mysql.sock`
+</code></p>
+
+<p>After:
+<code>sh
+`pdo_mysql.default_socket=/tmp/mysql.sock mysql.default_socket =
+/tmp/mysql.sock mysqli.default_socket = /tmp/mysql.sock`
+</code>
+Go to System Preferences > Sharing and restart 'Web Sharing' by unticking then
+ticking the checkbox next to it.</p>
+
+<p>Refresh the local website you were working on it should all be working.
+Fingers Crossed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Leopard/Snow Leopard - mysql_connect() Can't connect to local MySQL server through socket '/var/mysql/mysql.sock' (2)]]></title>
+    <link href="http://mattlangtree.com.au/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2/"/>
+    <updated>2009-07-05T15:08:23+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2</id>
+    <content type="html"><![CDATA[<p>I was setting up my local PHP/MySQL development environment on my local
+MacBook Pro to mirror our work development setup.</p>
+
+<p>I ran into the following error:</p>
+
+<p><code>
+`**Warning** on line 365 of include/lib/adodb/drivers/adodb-mysql.inc.php
+mysql_connect() [&lt;a href='function.mysql-connect'&gt;function.mysql-connect&lt;/a&gt;]:
+Can't connect to local MySQL server through socket '/var/mysql/mysql.sock'
+(2)`
+</code></p>
+
+<p>I have fixed this issue in the past on a previous Leopard install, so I
+thought it was the perfect candidate for a blog post.</p>
+
+<h2>Customise php.ini file to use custom MySQL socket</h2>
+
+<p>If you <strong>have</strong> made manual customisations to your php config file already,
+skip this part; otherwise run the following in Terminal.app:</p>
+
+<p><code>sudo cp /etc/php.ini.default /etc/php.ini</code></p>
+
+<p>Next, open <a href="http://www.sequelpro.com/">Sequel Pro</a> and connect to the mysql
+server on your local Mac. If you don't know how to do this, take a look at
+<a href="http://www.sequelpro.com/docs/Getting_Connected">Getting Connected</a> on the
+Sequel Pro documentation page.</p>
+
+<p>Then, choose _Database > Show Server Variables... _</p>
+
+<p><em><a href="http://mattlangtree.com.au/wp-content/uploads/2009/07/show-server-variables.jpg"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/07/show-server-variables.jpg" alt="show-server-variables" /></a></em></p>
+
+<p>Scroll down through the list of variables until you get to <strong>socket</strong>.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/07/screenshot-on-2009-07-05-at-24810-pm.png" alt="screenshot-on-2009-07-05-at-24810-pm" /></p>
+
+<p>Open up /etc/php.ini in Textmate or Coda and scroll down the where it says:</p>
+
+<p><code>; Default socket name for local MySQL connects.  If empty, uses the built-in
+; MySQL defaults. mysql.default_socket =</code></p>
+
+<p>Change the <strong>mysql.default_socket</strong> line to read:</p>
+
+<p><code>mysql.default_socket = /tmp/mysql.sock</code></p>
+
+<h2>Restart Web Sharing Service (Apache)</h2>
+
+<p>Now, restart your Web Sharing service by going to  <em>> System Preferences</em>...</p>
+
+<p>Choose Sharing from the System Preferences page.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/07/sharing-page.png" alt="sharing-page" /></p>
+
+<p>On the sharing pane, uncheck Web Sharing, wait a second for it to do its
+thing, then recheck it. If it was already unchecked, you will just need to
+choose the checkbox once.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/07/screenshot-on-2009-07-05-at-30027-pm.png" alt="screenshot-on-2009-07-05-at-30027-pm" /></p>
+
+<p>Now, just reload your php page in Safari, and it should hopefully <strong>just
+work</strong>. Your app should now be connecting to the local MySQL server on your
+Mac. Enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac Web development]]></title>
+    <link href="http://mattlangtree.com.au/2009/02/25/mac-web-development/"/>
+    <updated>2009-02-25T15:58:30+11:00</updated>
+    <id>http://mattlangtree.com.au/2009/02/25/mac-web-development</id>
+    <content type="html"><![CDATA[<h2><strong>Show hidden Files in Finder</strong></h2>
+
+<p><strong>Web Programmers need access to .htaccess files and occasionally other dot files/folders. Here is a way that you can make Finder (and your Desktop) show all files.</strong><br/>
+<code>defaults write com.apple.finder AppleShowAllFiles TRUE</code> <code>killall Finder</code></p>
+
+<h2><strong>Remove SVN folders from a website</strong></h2>
+
+<p>The command is broken into two parts, firstly we get a list of paths for the
+files to be deleted:</p>
+
+<p><code>find . -name ".svn"</code></p>
+
+<p>Once we are happy that the result from the first command worked correctly, we
+then attach the delete part of the command: <code>find . -name ".svn" | xargs rm
+-r</code></p>
+
+<p>If the files are locked or if they aren't owned by the user running the
+command, try the same line but with sudo attached to the second part of the
+command: <code>find . -name ".svn" | xargs **sudo** rm -rf</code></p>
+
+<h2><strong>Setting up Transmit</strong></h2>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/01/picture-2.png" alt="picture-2" /></p>
+
+<p>Most web developers want to be able to upload <strong>.htaccess files in Transmit
+</strong>as part of their web development workflow. Choose <strong>Show Invisible Files</strong>
+from the view menu in the main application window.</p>
+
+<p><strong>Queued transfers</strong> (if your server supports it) are a lot faster than single file transfers. By default the Queue is turned off in Transmit. To turn on Queueing, go into the Preferences menu and choose the Transfers tab. Set the <strong>Maximum queue connections</strong> value to a sensible number (2-4).<br/>
+<img src="http://mattlangtree.com.au/wp-content/uploads/2009/01/picture-3.png" alt="picture-3" /></p>
+
+<h2>Removing those pesky dot-underscore ( e.g - '._index.php') files</h2>
+
+<p>These files can really cripple your mac subversion experience, but there is an
+easy fix for this annoying issue. Run the following command in Terminal:</p>
+
+<p><code>mate .subversion/config</code> and look for the <strong>global-ignores</strong> line in the
+config file. Uncomment the line if necessary and replace it with the following
+list. <code>global-ignores = *.o *.lo *.la #*# .*.rej *.rej .*~ .#* .DS_Store ._*
+*.log *.bak</code></p>
+
+<p>_You will need to restart Versions.app for the changes to take effect. :) _</p>
+
+<h2>Safari Debug Menu</h2>
+
+<p>One of the most "can't live without" features of web development in Safari is
+the Debug menu.</p>
+
+<p>You can turn it on by typing the following command into Terminal.app.</p>
+
+<p><code>defaults write com.apple.Safari IncludeDebugMenu 1</code></p>
+
+<p>Then, restart Safari or WebKit and enjoy!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[WhatTheFont on iPhone]]></title>
+    <link href="http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone/"/>
+    <updated>2009-02-12T01:54:37+11:00</updated>
+    <id>http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone</id>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/02/picture-5.png" alt="picture-5" />Sites that require a file upload to
+occur as the main functionality, are a little restricted on the iPhone. The
+folks at myfonts.com have circumvented this by offering an <a href="http://new.myfonts.com/WhatTheFont/iPhone/">iPhone
+app</a> that allows you to upload
+photos to their font-matching service
+(<a href="http://new.myfonts.com/WhatTheFont/">WhatTheFont</a>) from either your iPhone
+camera, or from existing images in your iPhone Photo Gallery.</p>
+
+<p>The <a href="http://new.myfonts.com/WhatTheFont/">WhatTheFont</a> website is one of the
+most useful tools by far, in any graphic designers/web developers toolkit.
+Next time you are away from your Mac/PC and you see a
+radical/groovy/cute/funky/quirky or modern font on a poster or a menu, just
+whip out your iPhone and snap a pic and get a font match.</p>
+
+<p><em>*I tried this on my jail-broken version 2.0 firmware  iPhone with no luck,
+although it is most likely that this is because I'm not running firmware
+version 2.2.1 (current at time of writing).</em></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Stop Textmate from creating ._ files ]]></title>
+    <link href="http://mattlangtree.com.au/2009/01/09/textmate-creating-dot-underscore-files/"/>
+    <updated>2009-01-09T02:34:27+11:00</updated>
+    <id>http://mattlangtree.com.au/2009/01/09/textmate-creating-dot-underscore-files</id>
+    <content type="html"><![CDATA[<p>Textmate, by default creates annoying hidden '._' files that litter your svn
+status listings. These resource fork files will store cursor position,
+bookmarks and text folding as metadata. It is however possible to disable
+resource fork use in textmate.</p>
+
+<p>Close textmate and run the following in terminal: <code>defaults write
+com.macromates.textmate OakDocumentDisableFSMetaData 1</code> Source: <a href="http://manual.macromates.com/en/saving_files">http://manual.macromates.com/en/saving_files</a></p>
+]]></content>
+  </entry>
+  
+</feed>

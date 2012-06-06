@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: iOS | Matt Langtree]]></title>
+  <link href="http://mattlangtree.com.au/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.com.au/"/>
+  <updated>2012-01-14T23:28:49+11:00</updated>
+  <id>http://mattlangtree.com.au/</id>
+  <author>
+    <name><![CDATA[Matt Langtree]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[iPad large table data [sample project]]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec/"/>
+    <updated>2011-09-19T13:08:03+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec</id>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/IMG_1268-1024x445.jpg" alt="" /></p>
+
+<p>So you have a large XML feed with lots of rows/columns that you want to turn
+into an iPad app. Let's see what options we have for presenting this data.</p>
+
+<ol>
+<li>Start with <a href="http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableView_Class/Reference/Reference.html">UITableView</a> and create a subclass of <a href="http://developer.apple.com/library/IOS/#documentation/UIKit/Reference/UITableViewCell_Class/Reference/Reference.html">UITableViewCell</a> to layout all of the columns. <strong><em>Sure, but maybe you've got more columns than you can show on a single iPad screen. UITableView is not going to be an elegant solution here.</em></strong></li>
+<li>OK, you'll just hook up an <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSTableView_Class/Reference/Reference.html">NSTableView</a> right? <strong><em>ba-bum! — It's Mac only.</em></strong></li>
+<li>Maybe you could grab <a href="https://github.com/danielctull/DTGridView">Daniel Tull's DTGridView</a> and add a bunch of UILabel's to a grid view. <strong><em>This is pretty good, but there is an easier way..</em></strong></li>
+<li>Try a UIWebView and use HTML, CSS and Javascript? <em>Well this is the easiest of the lot, so let's give this a go.</em>
+What I have created is a hybrid native/web app. We take an iPad app shell,
+throw in a <a href="http://developer.apple.com/library/ios/#documentation/u%0Aikit/reference/UIWebView_Class/Reference/Reference.html">UIWebView</a>, and use HTML,
+Javascript, and some CSS to come up with a great looking table of information.
+I have used <a href="http://www.html5rocks.com/en/">HTML 5</a>,
+<a href="http://jquery.com/">jQuery</a>,  <a href="http://twitter.github.com/bootstrap/">Twitter's
+Bootstrap</a> and <a href="http://www.last.fm/api/show?service=394">Last.fm's XML API for
+events at venues</a>.</li>
+</ol>
+
+
+<p>{ % img http://mattlangtree.com.au/wp-content/uploads/app-breakdown1.jpg % }</p>
+
+<p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
+isn't modelling a particularly large dataset, but it's a good start.
+Additionally, you can use this as a reference for future iPad web apps.</p>
+
+<p>DataTable: <a href="https://github.com/mattlangtree/DataTable">View on GitHub</a> | <a href="https://github.com/mattlangtree/DataTable/zipball/master">Download Source</a>
+(Requires <a href="http://itunes.apple.com/au/app/xcode/id448457090?mt=12">Xcode 4.1 or higher</a>)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DCIntrospect - Debugging views in iOS (Update: Video)]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/19/dcintrospect/"/>
+    <updated>2011-09-19T04:12:06+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/19/dcintrospect</id>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.com.au/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.com.au/wp-content/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
+
+<p>From Pat's project description:</p>
+
+<blockquote><p>Introspect is small set of tools for iOS that aid in debugging user
+interfaces built with UIKit. It's especially useful for UI layouts that are
+dynamically created or can change during runtime, or for tuning performance by
+finding non-opaque views or views that are re-drawing unnecessarily. It's
+designed for use in the iPhone simulator, but can also be used on a device.</p></blockquote>
+
+<p>If you are laying out custom views and tracking their position/movement
+throughout the lifecycle of your app this tool will be quite useful.</p>
+
+<p>I heard about this project via word of mouth a while ago, and a few Swipe
+Conference speakers were speaking very highly of it.</p>
+
+<p>Three things to check out in the <a href="https://github.com/domesticcatsoftware/DCIntrospect">included demo
+app</a> (and to use in your app):</p>
+
+<ol>
+<li>Hit spacebar to activate DCIntrospect's inspector in the iOS simulator.</li>
+<li>Select any view in your app and press the 'p' button on your Mac's keyboard to dump the properties of that view</li>
+<li>Use the arrow keys on your keyboard to nudge views around whilst your app is running (similar to <a href="http://www.webkit.org/blog/829/web-inspector-updates/">Webkit's Web inspector</a>)
+Example of properties logged by DCIntrospect's inspector:</li>
+</ol>
+
+
+<p><code>objc Output from DCIntrospect
+** UIImageView : UIView : UIResponder : NSObject **   
+** UIView properties **
+tag: 0
+frame: {{147, 20}, {64, 64}} | bounds: {{0, 0}, {64, 64}} | center: {179, 52}
+transform: [1, 0, 0, 1, 0, 0]
+autoresizingMask: UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin
+autoresizesSubviews: YES
+contentMode: UIViewContentModeScaleToFill | contentStretch: {{0, 0}, {1, 1}}
+backgroundColor: R: 0 G: 0 B: 0 A: 0.00
+alpha: 1.00 | opaque: NO | hidden: NO | clips to bounds: NO | clearsContextBeforeDrawing: YES
+userInteractionEnabled: NO | multipleTouchEnabled: NO
+gestureRecognizers: nil  
+** UIImageView properties **
+drawMode: 0
+image:
+highlightedImage: nil
+animationImages: nil
+highlightedAnimationImages: nil
+animationDuration: 0
+animationRepeatCount: 0
+</code></p>
+
+<iframe src="http://player.vimeo.com/video/29148955?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p><a href="http://vimeo.com/29148955">Melbourne Cocoaheads July '11 - Talk 2 - Patrick Richards - DCIntrospect</a> from <a href="http://vimeo.com/user6009059">Oliver Jones</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS libraries and frameworks I use — September 2011]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011/"/>
+    <updated>2011-09-15T05:17:28+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011</id>
+    <content type="html"><![CDATA[<p>When I started out learning iOS application development I wished that there
+was a list of libraries that were proven to work well, were well documented
+and had great coverage on <a href="http://stackoverflow.com/questions/tagged/ios">Stack
+Overflow</a>.</p>
+
+<p>Here is the list of libraries and frameworks I use with great success in my
+projects:</p>
+
+<p><a href="http://allseeing-i.com/ASIHTTPRequest/">ASIHTTPRequest</a> — A perfectly decent
+library for all of your HTTP requests including downloading the content of a
+URL or submitting a form to a website API/endpoint. <em>(Alternatives: <a href="http://code.google.com/p/gtm-http-fetcher/">GTM HTTP
+Fetcher</a> thanks
+<a href="http://twitter.com/neilang">@neilang</a>)</em></p>
+
+<p><a href="http://code.google.com/p/json-framework/">SBJSON</a> — A great JSON parser and
+generator. Turn JSON into NSDictionary's NSArrays (etc) and vice versa.</p>
+
+<p><a href="http://developer.apple.com/library/ios/#samplecod%0Ae/Reachability/Introduction/Intro.html">Apple's Reachability class</a> — Included in ASIHTTPRequest, but
+worth a mention. Apple provides a class for detecting whether you have 3G/Edge
+access and the device is capable of routing IP traffic. It also pings Apple's
+servers to check if you have "greater internet" availability.</p>
+
+<p><a href="https://github.com/enormego/EGOImageLoading/">EGOImageView</a> — If you are
+working on a web-based app and you need to show a tableview full of web-loaded
+images you will want a library like this.</p>
+
+<p><a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> — A fairly easy to
+implement class for showing a translucent HUD (Heads Up Display). Use this if
+you want to notify a user that an operation has completed or the progress of
+some database operations that are running.</p>
+
+<p><a href="https://github.com/ldandersen/scifihifi-iphone">SFHFKeychainUtils</a> — Fairly
+straightforward class for interacting with iOS' keychain. If you are storing
+user's passwords in NSUserDefaults – stop. Use the keychain and give this
+class a go.</p>
+
+<p>MOC/NSManagedObject+Additions — Custom proprietary class for handling core
+data interaction.  Written by <a href="http://twitter.com/abhibeckert">@abhibeckert</a>
+with additions from yours truly. If you are using or have written a very light
+weight Core Data wrapper, let me know in the comments.</p>
+
+<p>If you have tried any of these and have found an alternative that works better
+let me know in the comments.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/3.png" alt="Images" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Restarting a video in MPMoviePlayerController]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/"/>
+    <updated>2011-09-09T00:49:28+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller</id>
+    <content type="html"><![CDATA[<p>I'm working on a project where the standard controls provided by
+MPMoviePlayerController aren't matching the existing styling of the app
+design. I need to provide a custom rewind button for the movie I'm auto-
+playing for the user. When the video finishes it needs to hide the modal movie
+view controller, and I'm handling this with the
+MPMoviePlayerPlaybackDidFinishNotification notification. The best way I can
+think of doing the rewind without triggering the view to dismiss is with the
+following code..</p>
+
+<p>``` obj-c Restart video in iOS</p>
+
+<pre><code>- (void)restartVideo
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:MPMoviePlayerPlaybackDidFinishNotification
+                                                  object:nil];  
+    [mp stop];
+    [mp play];  
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(moviePlayBackDidFinish:)
+                                                 name:MPMoviePlayerPlaybackDidFinishNotification
+                                               object:nil];
+}
+</code></pre>
+
+<p>```</p>
+
+<p><strong>Update:</strong> Thanks to @avenjamin for suggesting that I call the method -restartVideo rather than -rewindVideo as the meaning was slightly incorrect.</p>
+]]></content>
+  </entry>
+  
+</feed>

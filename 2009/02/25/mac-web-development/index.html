@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mac Web development - Matt Langtree</title>
+  <meta name="author" content="Matt Langtree">
+
+  
+  <meta name="description" content="Show hidden Files in Finder Web Programmers need access to .htaccess files and occasionally other dot files/folders. Here is a way that you can make &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mattlangtree.com.au/2009/02/25/mac-web-development">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Matt Langtree" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-4364552-2']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Matt Langtree</a></h1>
+</hgroup>
+
+</header>
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:mattlangtree.com.au" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about-matt/">About Matt</a></li>
+  <li><a href="/contact/">Contact</a></li>
+  <li><a href="/projects/">Projects</a></li>
+</ul>
+
+</nav> -->
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Mac Web Development</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-25T15:58:30+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2><strong>Show hidden Files in Finder</strong></h2>
+
+<p><strong>Web Programmers need access to .htaccess files and occasionally other dot files/folders. Here is a way that you can make Finder (and your Desktop) show all files.</strong><br/>
+<code>defaults write com.apple.finder AppleShowAllFiles TRUE</code> <code>killall Finder</code></p>
+
+<h2><strong>Remove SVN folders from a website</strong></h2>
+
+<p>The command is broken into two parts, firstly we get a list of paths for the
+files to be deleted:</p>
+
+<p><code>find . -name ".svn"</code></p>
+
+<p>Once we are happy that the result from the first command worked correctly, we
+then attach the delete part of the command: <code>find . -name ".svn" | xargs rm
+-r</code></p>
+
+<p>If the files are locked or if they aren&#8217;t owned by the user running the
+command, try the same line but with sudo attached to the second part of the
+command: <code>find . -name ".svn" | xargs **sudo** rm -rf</code></p>
+
+<h2><strong>Setting up Transmit</strong></h2>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/01/picture-2.png" alt="picture-2" /></p>
+
+<p>Most web developers want to be able to upload <strong>.htaccess files in Transmit
+</strong>as part of their web development workflow. Choose <strong>Show Invisible Files</strong>
+from the view menu in the main application window.</p>
+
+<p><strong>Queued transfers</strong> (if your server supports it) are a lot faster than single file transfers. By default the Queue is turned off in Transmit. To turn on Queueing, go into the Preferences menu and choose the Transfers tab. Set the <strong>Maximum queue connections</strong> value to a sensible number (2-4).<br/>
+<img src="http://mattlangtree.com.au/wp-content/uploads/2009/01/picture-3.png" alt="picture-3" /></p>
+
+<h2>Removing those pesky dot-underscore ( e.g - &#8216;._index.php&#8217;) files</h2>
+
+<p>These files can really cripple your mac subversion experience, but there is an
+easy fix for this annoying issue. Run the following command in Terminal:</p>
+
+<p><code>mate .subversion/config</code> and look for the <strong>global-ignores</strong> line in the
+config file. Uncomment the line if necessary and replace it with the following
+list. <code>global-ignores = *.o *.lo *.la #*# .*.rej *.rej .*~ .#* .DS_Store ._*
+*.log *.bak</code></p>
+
+<p>_You will need to restart Versions.app for the changes to take effect. :) _</p>
+
+<h2>Safari Debug Menu</h2>
+
+<p>One of the most &#8220;can&#8217;t live without&#8221; features of web development in Safari is
+the Debug menu.</p>
+
+<p>You can turn it on by typing the following command into Terminal.app.</p>
+
+<p><code>defaults write com.apple.Safari IncludeDebugMenu 1</code></p>
+
+<p>Then, restart Safari or WebKit and enjoy!</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">mattlangtree</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-25T15:58:30+11:00" pubdate data-updated="true">Feb 25<span>th</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/mac-os-x-hints/'>Mac OS X Hints</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mattlangtree.com.au/2009/02/25/mac-web-development/" data-via="mattlangtree" data-counturl="http://mattlangtree.com.au/2009/02/25/mac-web-development/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2009/02/25/mail-app-doesnt-work-safari-beta/" title="Previous Post: Mail.app doesn't work with new Safari">&laquo; Mail.app doesn't work with new Safari</a>
+      
+      
+        <a class="basic-alignment right" href="/2009/02/27/photos-at-work/" title="next Post: Photos at work">Photos at work &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    
+<section>
+  <ul id="main_links">
+	  <li><a href="/about-matt/">About Me</a></li>
+	  <li><a href="/contact/">Contact</a></li>
+	  <li><a href="/projects/">Projects</a></li>
+	  <li><a href="/blog/archives">Archives</a></li>
+  </ul>
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2012/01/14/what-drives-me-to-develop-software/">What drives me to develop software</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2012/01/11/links-january-2010/">Some people write newsletters. I collect links.</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/11/15/erd-diagrams-from-sequel-pro/">Entity Relationship Diagrams from Sequel Pro</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion/">Self-signed SSL Certificate on Mac OS X Lion</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/05/uitableview-section-header-draw-issue-in-ios5/">UITableView section header draw issue in iOS5</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/mattlangtree">@mattlangtree</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'mattlangtree',
+            count: 3,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("mattlangtree", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/mattlangtree" class="twitter-follow-button" data-show-count="false">Follow @mattlangtree</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Matt Langtree -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

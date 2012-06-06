@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Matt Langtree]]></title>
+  <link href="http://mattlangtree.com.au/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.com.au/"/>
+  <updated>2012-01-14T23:28:49+11:00</updated>
+  <id>http://mattlangtree.com.au/</id>
+  <author>
+    <name><![CDATA[Matt Langtree]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[What drives me to develop software]]></title>
+    <link href="http://mattlangtree.com.au/2012/01/14/what-drives-me-to-develop-software/"/>
+    <updated>2012-01-14T20:11:00+11:00</updated>
+    <id>http://mattlangtree.com.au/2012/01/14/what-drives-me-to-develop-software</id>
+    <content type="html"><![CDATA[<p>macdrifter on <a href="http://www.macdrifter.com/2012/01/developers-a-love-story/">Developers, A Love Story</a></p>
+
+<blockquote><p>If I like a developer I buy their wares just to support their work. When I say “I like a developer” I don’t just mean I like their products. I mean that I like the people behind the products.</p></blockquote>
+
+<p>The reasons he highlights in this article are the same reasons why I develop software.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Some people write newsletters. I collect links.]]></title>
+    <link href="http://mattlangtree.com.au/2012/01/11/links-january-2010/"/>
+    <updated>2012-01-11T20:05:00+11:00</updated>
+    <id>http://mattlangtree.com.au/2012/01/11/links-january-2010</id>
+    <content type="html"><![CDATA[<p>This is the first in hopefully a series of many blog posts about the resources I come across each month. For a long time I have been collecting useful links I have found around the internet and stored them on the code/link/image sharing service <a href="http://mediumstack.com/">Medium Stack</a>. Here is my list for January 2012.</p>
+
+<hr />
+
+
+<br />
+
+
+<ul>
+<li><a href="http://hackemist.com/SafariOmnibar/" title="Safari Omnibar">Safari Omnibar by Olivier Poitrey</a> &mdash; A nifty way to get Google Chrome&#8217;s Address/Search bar into the Mac&#8217;s default browser.</li>
+<li><a href="http://peepcode.com/products/advanced-git">Advanced Git | PeepCode Screencasts</a>  &mdash; I&#8217;m just learning git now, in 2012. I met Geoffrey Grosenbach recently at a Cocoaheads meetup in 2011 and Ben Hoskings is a Melbourne local and a git hero.</li>
+<li><a href="http://itunes.apple.com/us/app/remotix/id407498378?mt=8">App Store - Remotix</a> &mdash; An <strong>excellent</strong> VNC client for iPad and iPhone. Recommended by <a href="http://twitter.com/abhibeckert">@abhibeckert</a></li>
+<li><a href="http://blog.shinetech.com/2011/06/23/ci-with-jenkins-for-ios-apps-build-distribution-via-testflightapp-tutorial/">Continuous Deployment of iOS Apps with Jenkins and TestFlight</a> &mdash; I haven&#8217;t been doing much iOS work recently, but I will definitely be trying this out when I get back into it.</li>
+<li><a href="http://new.myfonts.com/fonts/hvdfonts/brandon-grotesque/">Brandon Grotesque - Webfont &amp; Desktop font « MyFonts</a> &mdash; A clean looking font that I bought for use on the <a href="http://northofthree.com/">North of Three</a> <a href="http://northofthree.com/logo.png">logo</a></li>
+<li><a href="http://www.uiparade.com/ui-toolkit/">The Ui Toolkit</a> &mdash; A collection of handy icons, photoshop textures, patterns and styles. I know a few people who have purchased this already. It only cost me $8 but I&#8217;m sure they could get away with charging at least $15&ndash;20 for it.</li>
+</ul>
+
+
+<p>All of these links come highly recommended. Let me know on Twitter (<a href="http://twitter.com/mattlangtree">@mattlangtree</a>) if you you liked this post or have any feedback.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Entity Relationship Diagrams from Sequel Pro]]></title>
+    <link href="http://mattlangtree.com.au/2011/11/15/erd-diagrams-from-sequel-pro/"/>
+    <updated>2011-11-15T00:39:56+11:00</updated>
+    <id>http://mattlangtree.com.au/2011/11/15/erd-diagrams-from-sequel-pro</id>
+    <content type="html"><![CDATA[<p>I found a great set of instructions for generating an Entity Relationship
+Diagram (ERD) from Sequel Pro indirectly (using the .dot format) in this
+article: <a href="http://norbauer.com/notebooks/code/notes/erd-diagrams-from-sequel-pro">http://norbauer.com/notebooks/code/notes/erd-diagrams-from-sequel-pro</a></p>
+
+<p>I adapted the instructions that JD posted in his article to generate a PNG
+image of the ERD of a database.</p>
+
+<p>Here are the instructions in full:</p>
+
+<ul>
+<li>Download the latest version of <a href="http://sequelpro.com/">Sequel Pro</a></li>
+<li>Install <a href="http://www.graphviz.org/">graphviz</a> via homebrew (note - sudo isn&#8217;t required for my installation of homebrew). brew install graphviz</li>
+<li>Connect to your MySQL database using Sequel Pro.</li>
+<li>In Sequel Pro, go to File > Export&#8230; > Choose Dot as the export type > Export.</li>
+<li>Launch Terminal.app and run the following command from the directory where the .dot file was exported to dot -Tpng your_database.dot > your_database.png </li>
+<li>I found that on a larger database that this produced a 5355 × 3784px image (which is probably great for printing out on A3 paper)</li>
+<li>I was looking for an ERD I could print out to pass around to some other developers, so I opted for the fdp binary to give me the best results. Again in Terminal.app run: fdp -Tpng localhost-ios-15-11-11.dot > your_database.png </li>
+</ul>
+
+
+<p>My instructions vary from JD&#8217;s a little in that I use homebrew for installing
+graphviz and that I export using a different binary (included in the graphviz
+package). I also took the shortcut of exporting to PNG directly rather than
+converting to an SVG file first.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Self-signed SSL Certificate on Mac OS X Lion]]></title>
+    <link href="http://mattlangtree.com.au/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion/"/>
+    <updated>2011-10-11T00:30:46+11:00</updated>
+    <id>http://mattlangtree.com.au/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion</id>
+    <content type="html"><![CDATA[<p>I needed to install a self-signed SSL Cert on my local Mac OS X Lion machine
+with the built-in Apache. You might consider doing this yourself if you ever
+want to write code that needs to utilise a secure HTTPS connection without
+having to deploy to a testing/live server for testing with a valid SSL
+certificate.</p>
+
+<p>The following link helped quite a bit:</p>
+
+<p><a href="http://www.houseofding.com/2008/11/generate-a-self-signed-ssl-certificate-for-local-development-on-a-mac/">http://www.houseofding.com/2008/11/generate-a-self-signed-ssl-certificate-for-local-development-on-a-mac/</a></p>
+
+<p>The instructions don&#8217;t directly match the Lion install, and I ended up putting
+my apache config options in /etc/apache2/extra/httpd-ssl.conf.</p>
+
+<p>Having a bit of experience with setting up Apache and mod-rewrite previously,
+it didn&#8217;t take longer than 30 minutes to work out - including using my custom
+URL namespace:</p>
+
+<pre><code>https://myfancysite.mac/
+</code></pre>
+
+<p>My only suggestion is that if you are sure you&#8217;ve done everything right but
+you can&#8217;t get Apache to start then try typing the following command to test
+for syntax/startup errors.</p>
+
+<pre><code>sudo apachectl configtest
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[UITableView section header draw issue in iOS5]]></title>
+    <link href="http://mattlangtree.com.au/2011/10/05/uitableview-section-header-draw-issue-in-ios5/"/>
+    <updated>2011-10-05T06:02:16+11:00</updated>
+    <id>http://mattlangtree.com.au/2011/10/05/uitableview-section-header-draw-issue-in-ios5</id>
+    <content type="html"><![CDATA[<p>If you are using custom section header views in your UITableView you would
+have implemented UITableViewDelegate&#8217;s following two delegate methods:</p>
+
+<pre><code>- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+- (UIView *) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+</code></pre>
+
+<p>If you are using the same code for tables with and without section headers
+there&#8217;s a good chance that you have some logic like the code below. The
+important point to note with the release of iOS5 is that it is no longer
+suitable in iOS5 to only return nil on the <strong>- (UIView <em>)
+tableView:(UITableView </em>)tableView viewForHeaderInSection:(NSInteger)section</strong>
+if you don&#8217;t want the section header to show. You now need to explicitly set a
+height of 0 for the section header.</p>
+
+<p>If you don&#8217;t follow this rule, you may end up with an empty section header
+being drawn, like so:</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/ios4-example-300x116.png"></p>
+
+<p><a href="http://mattlangtree.com.au/wp-content/uploads/ios5-example.png"><img src="http://mattlangtree.com.au/wp-content/uploads/ios5-example-300x166.png" alt="" /></a></p>
+
+<figure class='code'><figcaption><span>New UITableView code    </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span> <span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">section</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="c1">// This is the new important bit for iOS5.</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">([</span><span class="n">self</span> <span class="n">currentViewNeedsTableHeaders</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="k">return</span> <span class="mi">45</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// Will produce a green view with a black bottom separator line.</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span> <span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">viewForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">section</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">if</span> <span class="p">([</span><span class="n">self</span> <span class="n">currentViewNeedsTableHeaders</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">return</span> <span class="nb">nil</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// How wide is the screen?</span>
+</span><span class='line'>  <span class="kt">float</span> <span class="n">w</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIScreen</span> <span class="n">mainScreen</span><span class="p">]</span> <span class="n">bounds</span><span class="p">].</span><span class="n">size</span><span class="p">.</span><span class="n">width</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">headerLabel</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UILabel</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="mf">44.0</span><span class="p">)];</span>
+</span><span class='line'>  <span class="n">headerLabel</span><span class="p">.</span><span class="n">text</span> <span class="o">=</span> <span class="p">[</span><span class="n">self</span> <span class="nl">tableView:</span><span class="n">tableView</span> <span class="nl">titleForHeaderInSection:</span><span class="n">section</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">headerLabel</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="nl">colorWithRed:</span><span class="mf">0.431</span> <span class="nl">green:</span><span class="mf">0.820</span> <span class="nl">blue:</span><span class="mf">0.137</span> <span class="nl">alpha:</span><span class="mf">1.0</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">headerView</span> <span class="o">=</span> <span class="p">[[</span><span class="n">UIView</span> <span class="n">alloc</span><span class="p">]</span> <span class="nl">initWithFrame:</span><span class="n">CGRectMake</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="mi">45</span><span class="p">)];</span>
+</span><span class='line'>  <span class="n">headerView</span><span class="p">.</span><span class="n">backgroundColor</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIColor</span> <span class="n">blackColor</span><span class="p">];</span>
+</span><span class='line'>  <span class="n">headerLabel</span><span class="p">.</span><span class="n">font</span> <span class="o">=</span> <span class="p">[</span><span class="n">UIFont</span> <span class="nl">boldSystemFontOfSize:</span><span class="mi">15</span><span class="p">];</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="c1">// Add Label to the headerView&#39;s view hierarchy</span>
+</span><span class='line'>  <span class="p">[</span><span class="n">headerView</span> <span class="nl">addSubview:</span><span class="n">headerLabel</span><span class="p">];</span>
+</span><span class='line'>  <span class="k">return</span> <span class="n">headerView</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">currentViewNeedsTableHeaders</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">([</span><span class="n">self</span><span class="p">.</span><span class="n">someProperty</span> <span class="nl">isEqualToString:</span><span class="s">@&quot;parrot&quot;</span><span class="p">])</span> <span class="o">?</span> <span class="nb">FALSE</span> <span class="o">:</span> <span class="nb">TRUE</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iPad large table data [sample project]]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec/"/>
+    <updated>2011-09-19T13:08:03+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec</id>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/IMG_1268-1024x445.jpg" alt="" /></p>
+
+<p>So you have a large XML feed with lots of rows/columns that you want to turn
+into an iPad app. Let&#8217;s see what options we have for presenting this data.</p>
+
+<ol>
+<li>Start with <a href="http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableView_Class/Reference/Reference.html">UITableView</a> and create a subclass of <a href="http://developer.apple.com/library/IOS/#documentation/UIKit/Reference/UITableViewCell_Class/Reference/Reference.html">UITableViewCell</a> to layout all of the columns. <strong><em>Sure, but maybe you&#8217;ve got more columns than you can show on a single iPad screen. UITableView is not going to be an elegant solution here.</em></strong></li>
+<li>OK, you&#8217;ll just hook up an <a href="http://developer.apple.com/library/mac/#documentation/Cocoa/Reference/ApplicationKit/Classes/NSTableView_Class/Reference/Reference.html">NSTableView</a> right? <strong><em>ba-bum! — It&#8217;s Mac only.</em></strong></li>
+<li>Maybe you could grab <a href="https://github.com/danielctull/DTGridView">Daniel Tull&#8217;s DTGridView</a> and add a bunch of UILabel&#8217;s to a grid view. <strong><em>This is pretty good, but there is an easier way..</em></strong></li>
+<li>Try a UIWebView and use HTML, CSS and Javascript? <em>Well this is the easiest of the lot, so let&#8217;s give this a go.</em>
+What I have created is a hybrid native/web app. We take an iPad app shell,
+throw in a <a href="http://developer.apple.com/library/ios/#documentation/u%0Aikit/reference/UIWebView_Class/Reference/Reference.html">UIWebView</a>, and use HTML,
+Javascript, and some CSS to come up with a great looking table of information.
+I have used <a href="http://www.html5rocks.com/en/">HTML 5</a>,
+<a href="http://jquery.com/">jQuery</a>,  <a href="http://twitter.github.com/bootstrap/">Twitter&#8217;s
+Bootstrap</a> and <a href="http://www.last.fm/api/show?service=394">Last.fm&#8217;s XML API for
+events at venues</a>.</li>
+</ol>
+
+
+<p>{ % img http://mattlangtree.com.au/wp-content/uploads/app-breakdown1.jpg % }</p>
+
+<p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
+isn&#8217;t modelling a particularly large dataset, but it&#8217;s a good start.
+Additionally, you can use this as a reference for future iPad web apps.</p>
+
+<p>DataTable: <a href="https://github.com/mattlangtree/DataTable">View on GitHub</a> | <a href="https://github.com/mattlangtree/DataTable/zipball/master">Download Source</a>
+(Requires <a href="http://itunes.apple.com/au/app/xcode/id448457090?mt=12">Xcode 4.1 or higher</a>)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[DCIntrospect - Debugging views in iOS (Update: Video)]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/19/dcintrospect/"/>
+    <updated>2011-09-19T04:12:06+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/19/dcintrospect</id>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.com.au/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.com.au/wp-content/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
+
+<p>From Pat&#8217;s project description:</p>
+
+<blockquote><p>Introspect is small set of tools for iOS that aid in debugging user
+interfaces built with UIKit. It&#8217;s especially useful for UI layouts that are
+dynamically created or can change during runtime, or for tuning performance by
+finding non-opaque views or views that are re-drawing unnecessarily. It&#8217;s
+designed for use in the iPhone simulator, but can also be used on a device.</p></blockquote>
+
+<p>If you are laying out custom views and tracking their position/movement
+throughout the lifecycle of your app this tool will be quite useful.</p>
+
+<p>I heard about this project via word of mouth a while ago, and a few Swipe
+Conference speakers were speaking very highly of it.</p>
+
+<p>Three things to check out in the <a href="https://github.com/domesticcatsoftware/DCIntrospect">included demo
+app</a> (and to use in your app):</p>
+
+<ol>
+<li>Hit spacebar to activate DCIntrospect&#8217;s inspector in the iOS simulator.</li>
+<li>Select any view in your app and press the &#8216;p&#8217; button on your Mac&#8217;s keyboard to dump the properties of that view</li>
+<li>Use the arrow keys on your keyboard to nudge views around whilst your app is running (similar to <a href="http://www.webkit.org/blog/829/web-inspector-updates/">Webkit&#8217;s Web inspector</a>)
+Example of properties logged by DCIntrospect&#8217;s inspector:</li>
+</ol>
+
+
+<figure class='code'><figcaption><span>Output from DCIntrospect</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">**</span> <span class="n">UIImageView</span> <span class="o">:</span> <span class="n">UIView</span> <span class="o">:</span> <span class="n">UIResponder</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="o">**</span>
+</span><span class='line'><span class="o">**</span> <span class="n">UIView</span> <span class="n">properties</span> <span class="o">**</span>
+</span><span class='line'><span class="nl">tag:</span> <span class="mi">0</span>
+</span><span class='line'><span class="nl">frame:</span> <span class="p">{{</span><span class="mi">147</span><span class="p">,</span> <span class="mi">20</span><span class="p">},</span> <span class="p">{</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">}}</span> <span class="o">|</span> <span class="nl">bounds:</span> <span class="p">{{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">64</span><span class="p">,</span> <span class="mi">64</span><span class="p">}}</span> <span class="o">|</span> <span class="nl">center:</span> <span class="p">{</span><span class="mi">179</span><span class="p">,</span> <span class="mi">52</span><span class="p">}</span>
+</span><span class='line'><span class="nl">transform:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+</span><span class='line'><span class="nl">autoresizingMask:</span> <span class="n">UIViewAutoresizingFlexibleRightMargin</span> <span class="o">|</span> <span class="n">UIViewAutoresizingFlexibleBottomMargin</span>
+</span><span class='line'><span class="nl">autoresizesSubviews:</span> <span class="n">YES</span>
+</span><span class='line'><span class="nl">contentMode:</span> <span class="n">UIViewContentModeScaleToFill</span> <span class="o">|</span> <span class="nl">contentStretch:</span> <span class="p">{{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">}}</span>
+</span><span class='line'><span class="nl">backgroundColor:</span> <span class="nl">R:</span> <span class="mi">0</span> <span class="nl">G:</span> <span class="mi">0</span> <span class="nl">B:</span> <span class="mi">0</span> <span class="nl">A:</span> <span class="mf">0.00</span>
+</span><span class='line'><span class="nl">alpha:</span> <span class="mf">1.00</span> <span class="o">|</span> <span class="nl">opaque:</span> <span class="n">NO</span> <span class="o">|</span> <span class="nl">hidden:</span> <span class="n">NO</span> <span class="o">|</span> <span class="n">clips</span> <span class="n">to</span> <span class="nl">bounds:</span> <span class="n">NO</span> <span class="o">|</span> <span class="nl">clearsContextBeforeDrawing:</span> <span class="n">YES</span>
+</span><span class='line'><span class="nl">userInteractionEnabled:</span> <span class="n">NO</span> <span class="o">|</span> <span class="nl">multipleTouchEnabled:</span> <span class="n">NO</span>
+</span><span class='line'><span class="nl">gestureRecognizers:</span> <span class="nb">nil</span>
+</span><span class='line'><span class="o">**</span> <span class="n">UIImageView</span> <span class="n">properties</span> <span class="o">**</span>
+</span><span class='line'><span class="nl">drawMode:</span> <span class="mi">0</span>
+</span><span class='line'><span class="nl">image:</span>
+</span><span class='line'><span class="nl">highlightedImage:</span> <span class="nb">nil</span>
+</span><span class='line'><span class="nl">animationImages:</span> <span class="nb">nil</span>
+</span><span class='line'><span class="nl">highlightedAnimationImages:</span> <span class="nb">nil</span>
+</span><span class='line'><span class="nl">animationDuration:</span> <span class="mi">0</span>
+</span><span class='line'><span class="nl">animationRepeatCount:</span> <span class="mi">0</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<iframe src="http://player.vimeo.com/video/29148955?title=0&amp;byline=0&amp;portrait=0" width="400" height="225" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+
+<p><a href="http://vimeo.com/29148955">Melbourne Cocoaheads July &#8216;11 - Talk 2 - Patrick Richards - DCIntrospect</a> from <a href="http://vimeo.com/user6009059">Oliver Jones</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[iOS libraries and frameworks I use — September 2011]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011/"/>
+    <updated>2011-09-15T05:17:28+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011</id>
+    <content type="html"><![CDATA[<p>When I started out learning iOS application development I wished that there
+was a list of libraries that were proven to work well, were well documented
+and had great coverage on <a href="http://stackoverflow.com/questions/tagged/ios">Stack
+Overflow</a>.</p>
+
+<p>Here is the list of libraries and frameworks I use with great success in my
+projects:</p>
+
+<p><a href="http://allseeing-i.com/ASIHTTPRequest/">ASIHTTPRequest</a> — A perfectly decent
+library for all of your HTTP requests including downloading the content of a
+URL or submitting a form to a website API/endpoint. <em>(Alternatives: <a href="http://code.google.com/p/gtm-http-fetcher/">GTM HTTP
+Fetcher</a> thanks
+<a href="http://twitter.com/neilang">@neilang</a>)</em></p>
+
+<p><a href="http://code.google.com/p/json-framework/">SBJSON</a> — A great JSON parser and
+generator. Turn JSON into NSDictionary&#8217;s NSArrays (etc) and vice versa.</p>
+
+<p><a href="http://developer.apple.com/library/ios/#samplecod%0Ae/Reachability/Introduction/Intro.html">Apple&#8217;s Reachability class</a> — Included in ASIHTTPRequest, but
+worth a mention. Apple provides a class for detecting whether you have 3G/Edge
+access and the device is capable of routing IP traffic. It also pings Apple&#8217;s
+servers to check if you have &#8220;greater internet&#8221; availability.</p>
+
+<p><a href="https://github.com/enormego/EGOImageLoading/">EGOImageView</a> — If you are
+working on a web-based app and you need to show a tableview full of web-loaded
+images you will want a library like this.</p>
+
+<p><a href="https://github.com/jdg/MBProgressHUD">MBProgressHUD</a> — A fairly easy to
+implement class for showing a translucent HUD (Heads Up Display). Use this if
+you want to notify a user that an operation has completed or the progress of
+some database operations that are running.</p>
+
+<p><a href="https://github.com/ldandersen/scifihifi-iphone">SFHFKeychainUtils</a> — Fairly
+straightforward class for interacting with iOS&#8217; keychain. If you are storing
+user&#8217;s passwords in NSUserDefaults – stop. Use the keychain and give this
+class a go.</p>
+
+<p>MOC/NSManagedObject+Additions — Custom proprietary class for handling core
+data interaction.  Written by <a href="http://twitter.com/abhibeckert">@abhibeckert</a>
+with additions from yours truly. If you are using or have written a very light
+weight Core Data wrapper, let me know in the comments.</p>
+
+<p>If you have tried any of these and have found an alternative that works better
+let me know in the comments.</p>
+
+<p><img src="http://mattlangtree.com.au/wp-content/uploads/3.png" alt="Images" /></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mac OS X Lion - Turn off Saved apps]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/13/mac-os-x-lion-turn-off-saved-apps/"/>
+    <updated>2011-09-13T23:53:48+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/13/mac-os-x-lion-turn-off-saved-apps</id>
+    <content type="html"><![CDATA[<p><strong>Situation:</strong> I have a late 2009 iMac (3.06Ghz Core 2 Duo, 4GB Ram, <strong>No SSD</strong>) running Mac OS X Lion 10.7.1 in the office. It&#8217;s a fast machine — On Snow Leopard.<br/>
+<strong>The Problem:</strong> After a day of work, my iMac gets shut down at 10pm to save power and starts up again at 7am. The process of logging in to my Mac in the morning is quite a slow one, with the addition of the new &#8220;Restore windows&#8221; feature in Mac OS X Lion.<br/>
+<strong>The Solution:</strong> Any of my machines with non-SSD drives running Mac OS X Lion, now have <em>&#8220;Restore windows when quitting and re-opening apps&#8221;</em> disabled by default.<br/>
+You can do this by going into System Preferences > General and unticking the
+<em>&#8220;Restore windows when quitting and re-opening apps&#8221; </em>option.</p>
+
+<p>I would recommend that if you are running an older iMac without an SSD and you
+log in/out of your machine on a regular basis that you follow my lead  — At
+least until the option of installing an SSD in your machine is a feasible
+option (a highly recommended option).</p>
+
+<p><a href="http://mattlangtree.com.au/wp-%0Acontent/uploads/Screen-Shot-2011-09-14-at-9.42.21-AM.png"><img src="http://mattlangtree.com.au/wp-content/uploads/Screen-Shot-2011-09-14-at-9.42.21-AM.png" alt="" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Restarting a video in MPMoviePlayerController]]></title>
+    <link href="http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/"/>
+    <updated>2011-09-09T00:49:28+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller</id>
+    <content type="html"><![CDATA[<p>I&#8217;m working on a project where the standard controls provided by
+MPMoviePlayerController aren&#8217;t matching the existing styling of the app
+design. I need to provide a custom rewind button for the movie I&#8217;m auto-
+playing for the user. When the video finishes it needs to hide the modal movie
+view controller, and I&#8217;m handling this with the
+MPMoviePlayerPlaybackDidFinishNotification notification. The best way I can
+think of doing the rewind without triggering the view to dismiss is with the
+following code..</p>
+
+<figure class='code'><figcaption><span>Restart video in iOS   </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='obj-c'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">restartVideo</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">removeObserver:</span><span class="n">self</span>
+</span><span class='line'>                                                    <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
+</span><span class='line'>                                                  <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">stop</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">play</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span>
+</span><span class='line'>                                             <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">moviePlayBackDidFinish:</span><span class="p">)</span>
+</span><span class='line'>                                                 <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
+</span><span class='line'>                                               <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Update:</strong> Thanks to @avenjamin for suggesting that I call the method -restartVideo rather than -rewindVideo as the meaning was slightly incorrect.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[MySQL Lion not working]]></title>
+    <link href="http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working/"/>
+    <updated>2011-08-02T02:12:24+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working</id>
+    <content type="html"><![CDATA[<p>If you are like me you used the default MySQL, Apache and PHP provided with
+Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for you.</p>
+
+<p>These are the steps that I followed to get MySQL working on Lion:</p>
+
+<ol>
+<li>Update php.ini - enable all mysql extensions (because I use Zend, wordpress and other frameworks)</li>
+<li>Make sure MySQL is started and you can connect to it in <a href="http://www.sequelpro.com/">Sequel Pro</a></li>
+<li>Go to Database > Server Variables and search for &#8216;socket&#8217;. It will most likely be set to &#8216;/tmp/mysql.sock&#8217;</li>
+<li>Update the socket locations for MySQL in your php.ini to /tmp/mysql.sock</li>
+</ol>
+
+
+<p>Before:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="sb">`</span>pdo_mysql.default_socket<span class="o">=</span>/var/mysql/mysql.sock mysql.default_socket <span class="o">=</span>
+</span><span class='line'>/var/mysql/mysql.sock mysqli.default_socket <span class="o">=</span> /var/mysql/mysql.sock<span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>After:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="sb">`</span>pdo_mysql.default_socket<span class="o">=</span>/tmp/mysql.sock mysql.default_socket <span class="o">=</span>
+</span><span class='line'>/tmp/mysql.sock mysqli.default_socket <span class="o">=</span> /tmp/mysql.sock<span class="sb">`</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Go to System Preferences > Sharing and restart &#8216;Web Sharing&#8217; by unticking then
+ticking the checkbox next to it.</p>
+
+<p>Refresh the local website you were working on it should all be working.
+Fingers Crossed.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[First Screencast - Sequel Pro getting started]]></title>
+    <link href="http://mattlangtree.com.au/2011/06/11/first-screencast-sequel-pro-getting-started/"/>
+    <updated>2011-06-11T08:34:06+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/06/11/first-screencast-sequel-pro-getting-started</id>
+    <content type="html"><![CDATA[<p>This is my first attempt at screencasting, so go easy. The motivation behind
+this was a general consensus that the <a href="http://sequelpro.com/release-notes.html">release notes for Sequel
+Pro</a> releases were consistently long
+and nobody besides the developers would even read them.</p>
+
+<p><a href="http://www.youtube.com/watch?v=blcfcZIj298">Installing Sequel Pro and Connecting via a socket and SSH
+Tunnel</a></p>
+
+<p>I&#8217;ve had a fair bit of feedback from peers about the way I present in my
+screencasts:</p>
+
+<ul>
+<li>I need to speak slower. - I need to emphasise stumbling points for new users. - Screencasts are for new users, not me. So make it easy to follow. - The typing is a little loud but it is good to get that additional audible indication of what is happening. - Mouse movements need to be more clear and concise.<br/>
+If it all gets too real, I may have to turn commenting off, but for now let me
+know what you think.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[XCode 4 shortcuts]]></title>
+    <link href="http://mattlangtree.com.au/2011/04/07/xcode-4-shortcuts/"/>
+    <updated>2011-04-07T02:16:37+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/04/07/xcode-4-shortcuts</id>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/Xcode-2-dragged.jpg" alt="" /></p>
+
+<p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="http://mattlangtree.com.au/wp-content/uploads/Xcode_4_Shortcuts_bw-2page.pdf">Local
+Copy</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Medium Stack iPhone App]]></title>
+    <link href="http://mattlangtree.com.au/2011/04/03/medium-stack-iphone-app/"/>
+    <updated>2011-04-03T22:23:18+10:00</updated>
+    <id>http://mattlangtree.com.au/2011/04/03/medium-stack-iphone-app</id>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.com.au/wp-content/uploads/medium-stack-iphone.png"><img src="http://mattlangtree.com.au/wp-content/uploads/medium-stack-iphone.png" alt="hide" /></a>
+The new iPhone App for Medium Stack is in Alpha testing stages, as
+the final features are added to the app. Anybody who is willing to both test
+and provide bug reports for this new iPhone app should contact me at <a href="mailto:info@northofthree.com?subject=Interested+in+testing+the+Medium+S%0Atack+iPhone+app">North of
+Three</a>.</p>
+
+<p>Upload and comment on your Medium Stack images, share with SMS, Twitter and
+via the clipboard.</p>
+
+<p>The  iPhone app takes full advantage of the <a href="http://mediumstack.com/api/">Medium Stack API</a> for accessing all of your media.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jay–Z - Death of Auto-Tune]]></title>
+    <link href="http://mattlangtree.com.au/2010/02/15/jaye28093z-death-of-auto-tune/"/>
+    <updated>2010-02-15T12:54:15+11:00</updated>
+    <id>http://mattlangtree.com.au/2010/02/15/jaye28093z-death-of-auto-tune</id>
+    <content type="html"><![CDATA[<p>So, here&#8217;s the story.. Jay-Z wakes up one day and gets dropped off at an
+abandoned warehouse, by himself.</p>
+
+<p>He proceeds to rap in the empty warehouse, by himself.</p>
+
+<p>He blows sh*t up and disses a bunch of rappers. finito.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Jindabyne and the Snowy mountain region]]></title>
+    <link href="http://mattlangtree.com.au/2009/09/09/jindabyne-and-the-snowy-mountain-region/"/>
+    <updated>2009-09-09T00:10:58+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/09/09/jindabyne-and-the-snowy-mountain-region</id>
+    <content type="html"><![CDATA[<p>Richie and I went up to see the snow bunnies up at Perisher Blue, and we took
+the camera along. Along the way we got a small bout of snow, we experienced 1
+degree temperature and had a &#8220;run in&#8221; with a kangaroo&#8230;</p>
+
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6510-200x200.jpg" alt="img_6510" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6557-200x200.jpg" alt="img_6557" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6537-200x200.jpg" alt="img_6537" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/p1000584-200x200.jpg" alt="p1000584" /></a></p>
+
+<p>Have a look through the photos and leave a comment on Flickr or on the blog.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mooloolaba to Canberra]]></title>
+    <link href="http://mattlangtree.com.au/2009/09/08/mooloolaba-to-canberra/"/>
+    <updated>2009-09-08T01:45:35+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/09/08/mooloolaba-to-canberra</id>
+    <content type="html"><![CDATA[<p>It&#8217;s late here 1:20am and I&#8217;m heading to the snow early tomorrow.. Sorry, I
+haven&#8217;t labeled any of the photos yet :(</p>
+
+<p>But here they are, photos from Mooloolaba to Canberra. There is plenty of
+video still to come :P</p>
+
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_0845-200x200.jpg" alt="img_0845" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_0848-200x200.jpg" alt="img_0848" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6366-200x200.jpg" alt="img_6366" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_0860-200x200.jpg" alt="img_0860" /></a></p>
+
+<p>Here&#8217;s the quick itinerary of my last few days..</p>
+
+<p><strong>Thursday</strong>: Hang out with Belinda and Fabrizio, check out Mooloolaba Main Beach and have beers at O&#8217;Malleys with Fabrizio, drive a few hours to pick up some <a href="http://www.kdmototrials.com.au/boots.htm">Trials boots</a> for Dave from Brisbane..<br/>
+<strong>Friday</strong>: Driving and driving (Mooloolaba to Coffs Harbour)<br/>
+<strong>Saturday</strong>: Coffs Harbour to Newcastle (to see a relatives <a href="http://shrt.tw/4vcwap">new 350Z</a> and say Hi!), then to Sydney.<br/>
+<strong>Saturday Night</strong>: Yummy Thai food + Buzz on PS2 + <a href="http://en.wikipedia.org/wiki/Ţuica">Ţuica</a> (thanks to Marius Ursache) at <a href="http://www.sequelpro.com/developers.html">Ben Perry&#8217;s</a> apartment (avenjamin) in Sydney.<br/>
+<strong>Sunday</strong>: 15 minute train ride to Sydney — saw the Harbour bridge, Opera House and Australia&#8217;s flagship Apple Store. Drive to Canberra..<br/>
+<strong>Monday</strong>: <a href="http://www.questacon.edu.au/">Questacon</a> in the afternoon. <a href="http://www.apple.com/trailers/sony_pictures/thetakingofpelham123/">Taking Pelham 123</a> at Hoyts at Woden Plaza. Chased a wombat (we called her Jill) across the road into the bushes near <a href="http://en.wikipedia.org/wiki/Kevin_Rudd">KRudd&#8217;s</a> house.<br/>
+<strong>Tomorrow</strong>: Check out Jindabyne.. Perisher.. Thredbo .. :)</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Townsville to Mooloolaba photos]]></title>
+    <link href="http://mattlangtree.com.au/2009/09/03/townsville-to-mooloolaba/"/>
+    <updated>2009-09-03T17:35:21+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/09/03/townsville-to-mooloolaba</id>
+    <content type="html"><![CDATA[<p>Sorry for the missing videocast yesterday, there was no 3G coverage in
+Mooloolaba where I was staying. I&#8217;ve decided to post the Townsville-Mackay,
+Mackay-Maryborough and Maryborough-Mooloolaba photos (Wow, did I get all the
+names right?) whilst I get the video ready.</p>
+
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6187-200x200.jpg" alt="img_6187" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6198-200x200.jpg" alt="img_6198" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6226-200x200.jpg" alt="img_6226" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/09/img_6250-200x200.jpg" alt="img_6250" /></a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Cairns to Townsville]]></title>
+    <link href="http://mattlangtree.com.au/2009/08/31/cairns-to-townsville/"/>
+    <updated>2009-08-31T22:06:26+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/08/31/cairns-to-townsville</id>
+    <content type="html"><![CDATA[<p>The first leg of the trip was only short, a mere 4 hours driving. I&#8217;m staying
+the night in Townsville with relatives Auntie Marie, Uncle Bill and my
+cousin&#8217;s Timothy and Emily.</p>
+
+<p>I was a bit slow off the start, with a few pre-travel requirements stealing
+the daylight away from me. At the last minute before I thought I was leaving,
+I asked my awesome dad to give the car a once over and check the essentials.</p>
+
+<p>Oil .. OK, Wiper Fluid ..OK, Tyres .. FAIL!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Climbing the Walsh's Pyramid]]></title>
+    <link href="http://mattlangtree.com.au/2009/08/28/climbing-the-walshs-pyramid/"/>
+    <updated>2009-08-28T11:50:19+10:00</updated>
+    <id>http://mattlangtree.com.au/2009/08/28/climbing-the-walshs-pyramid</id>
+    <content type="html"><![CDATA[<p>Was up bright and early on Saturday morning (22Aug09) to climb the local
+&#8216;Mordor&#8221; - Walsh&#8217;s Pyramid.</p>
+
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/08/img_6129-200x200.jpg" alt="img_6129" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/08/img_6133-200x200.jpg" alt="img_6133" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/08/img_6126-200x200.jpg" alt="img_6126" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/08/img_4979-200x200.jpg" alt="img_4979" /></a></p>
+]]></content>
+  </entry>
+  
+</feed>
