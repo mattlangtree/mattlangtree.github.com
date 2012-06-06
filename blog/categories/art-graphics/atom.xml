@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Art/Graphics | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/art-graphics/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/art-graphics/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[shrt.tw]]></title>
-    <link href="http://mattlangtree.com.au/2009/07/12/shrttw/"/>
+    <link href="http://mattlangtree.github.com/2009/07/12/shrttw/"/>
     <updated>2009-07-12T12:30:42+10:00</updated>
-    <id>http://mattlangtree.com.au/2009/07/12/shrttw</id>
+    <id>http://mattlangtree.github.com/2009/07/12/shrttw</id>
     <content type="html"><![CDATA[<p>A new project that I'm currently working on is <a href="http://shrt.tw/">SHRT.TW</a>.
 This one I'm keeping pretty quiet for now.. If you are a web/application
 developer or a mac user expect shrt.tw to be an integral part of your daily
@@ -32,9 +32,9 @@ one.</p>
   
   <entry>
     <title type="html"><![CDATA[51 creative business cards]]></title>
-    <link href="http://mattlangtree.com.au/2009/05/30/51-creative-business-cards/"/>
+    <link href="http://mattlangtree.github.com/2009/05/30/51-creative-business-cards/"/>
     <updated>2009-05-30T15:30:21+10:00</updated>
-    <id>http://mattlangtree.com.au/2009/05/30/51-creative-business-cards</id>
+    <id>http://mattlangtree.github.com/2009/05/30/51-creative-business-cards</id>
     <content type="html"><![CDATA[<p>An <a href="http://www.quicksprout.com/2008/09/20/creative-business-cards-that-make-you-look-twice/">interesting post</a> from Quick Sprout:</p>
 
 <p><a href="http://www.quicksprout.com/2008/09/20/creative-business-cards-that-make-you-look-twice/"><img src="http://mattlangtree.com.au/wp-content/uploads/2009/05/clothespin.jpg" alt="Creative Business Cards" /></a></p>
@@ -47,9 +47,9 @@ one.</p>
   
   <entry>
     <title type="html"><![CDATA[Photos at work]]></title>
-    <link href="http://mattlangtree.com.au/2009/02/27/photos-at-work/"/>
+    <link href="http://mattlangtree.github.com/2009/02/27/photos-at-work/"/>
     <updated>2009-02-27T13:49:47+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/02/27/photos-at-work</id>
+    <id>http://mattlangtree.github.com/2009/02/27/photos-at-work</id>
     <content type="html"><![CDATA[<p>Over the last few months, the Boston Globe have been collecting images from
 big economy news stories of people 'working', and have posted a kaleidoscope
 of photos. The quantity and size of some of these factories, and the products
@@ -65,9 +65,9 @@ they produce, are quite breathtaking!</p>
   
   <entry>
     <title type="html"><![CDATA[Pepsi Logo Response — Lawrence Yang]]></title>
-    <link href="http://mattlangtree.com.au/2009/02/14/pepsi-logo-lawrence-yang/"/>
+    <link href="http://mattlangtree.github.com/2009/02/14/pepsi-logo-lawrence-yang/"/>
     <updated>2009-02-14T14:01:51+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/02/14/pepsi-logo-lawrence-yang</id>
+    <id>http://mattlangtree.github.com/2009/02/14/pepsi-logo-lawrence-yang</id>
     <content type="html"><![CDATA[<p>A talented water-colour artist, Lawrence Yang
 [<a href="http://blowatlife.blogspot.com/">blowatlife.blogspot</a>] recently posted a
 response to the new Pepsi logo design. The design has had an outrageous amount
@@ -82,9 +82,9 @@ Blowatlife" /></p>
   
   <entry>
     <title type="html"><![CDATA[new theme for mattlangtree.com.au]]></title>
-    <link href="http://mattlangtree.com.au/2008/10/05/new-mattlangtree-blog-theme/"/>
+    <link href="http://mattlangtree.github.com/2008/10/05/new-mattlangtree-blog-theme/"/>
     <updated>2008-10-05T05:26:08+11:00</updated>
-    <id>http://mattlangtree.com.au/2008/10/05/new-mattlangtree-blog-theme</id>
+    <id>http://mattlangtree.github.com/2008/10/05/new-mattlangtree-blog-theme</id>
     <content type="html"><![CDATA[<p>mattlangtree.com.au now has a fresh new look, courtesy of the folks at
 designdisease.com.</p>
 

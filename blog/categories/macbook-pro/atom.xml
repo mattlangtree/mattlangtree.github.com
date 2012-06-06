@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Macbook Pro | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/macbook-pro/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/macbook-pro/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MacBook Pro 17" + 4 FREE surprises!]]></title>
-    <link href="http://mattlangtree.com.au/2008/07/28/macbook-pro-17-4-free-surprises/"/>
+    <link href="http://mattlangtree.github.com/2008/07/28/macbook-pro-17-4-free-surprises/"/>
     <updated>2008-07-28T21:14:29+10:00</updated>
-    <id>http://mattlangtree.com.au/2008/07/28/macbook-pro-17-4-free-surprises</id>
+    <id>http://mattlangtree.github.com/2008/07/28/macbook-pro-17-4-free-surprises</id>
     <content type="html"><![CDATA[<p>Yesterday I called up apple support asking them if I could choose a non-glossy
 display for the MacBook Pro (MBP) 17" that I wanted to order from the Mac
 Refurbished store.</p>

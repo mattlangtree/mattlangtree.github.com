@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Mac OS X Hints | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/mac-os-x-hints/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/mac-os-x-hints/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MySQL Lion not working]]></title>
-    <link href="http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working/"/>
+    <link href="http://mattlangtree.github.com/2011/08/02/mysql-lion-not-working/"/>
     <updated>2011-08-02T02:12:24+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working</id>
+    <id>http://mattlangtree.github.com/2011/08/02/mysql-lion-not-working</id>
     <content type="html"><![CDATA[<p>If you are like me you used the default MySQL, Apache and PHP provided with
 Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for you.</p>
 
@@ -52,9 +52,9 @@ Fingers Crossed.</p>
   
   <entry>
     <title type="html"><![CDATA[Leopard/Snow Leopard - mysql_connect() Can't connect to local MySQL server through socket '/var/mysql/mysql.sock' (2)]]></title>
-    <link href="http://mattlangtree.com.au/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2/"/>
+    <link href="http://mattlangtree.github.com/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2/"/>
     <updated>2009-07-05T15:08:23+10:00</updated>
-    <id>http://mattlangtree.com.au/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2</id>
+    <id>http://mattlangtree.github.com/2009/07/05/leopard-mysql_connect-cant-connect-to-local-mysql-server-through-socket-var-mysql-mysql-sock-2</id>
     <content type="html"><![CDATA[<p>I was setting up my local PHP/MySQL development environment on my local
 MacBook Pro to mirror our work development setup.</p>
 
@@ -121,9 +121,9 @@ Mac. Enjoy!</p>
   
   <entry>
     <title type="html"><![CDATA[Mac Web development]]></title>
-    <link href="http://mattlangtree.com.au/2009/02/25/mac-web-development/"/>
+    <link href="http://mattlangtree.github.com/2009/02/25/mac-web-development/"/>
     <updated>2009-02-25T15:58:30+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/02/25/mac-web-development</id>
+    <id>http://mattlangtree.github.com/2009/02/25/mac-web-development</id>
     <content type="html"><![CDATA[<h2><strong>Show hidden Files in Finder</strong></h2>
 
 <p><strong>Web Programmers need access to .htaccess files and occasionally other dot files/folders. Here is a way that you can make Finder (and your Desktop) show all files.</strong><br/>
@@ -182,9 +182,9 @@ the Debug menu.</p>
   
   <entry>
     <title type="html"><![CDATA[WhatTheFont on iPhone]]></title>
-    <link href="http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone/"/>
+    <link href="http://mattlangtree.github.com/2009/02/12/whatthefont-now-on-iphone/"/>
     <updated>2009-02-12T01:54:37+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone</id>
+    <id>http://mattlangtree.github.com/2009/02/12/whatthefont-now-on-iphone</id>
     <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/02/picture-5.png" alt="picture-5" />Sites that require a file upload to
 occur as the main functionality, are a little restricted on the iPhone. The
 folks at myfonts.com have circumvented this by offering an <a href="http://new.myfonts.com/WhatTheFont/iPhone/">iPhone
@@ -207,9 +207,9 @@ version 2.2.1 (current at time of writing).</em></p>
   
   <entry>
     <title type="html"><![CDATA[Stop Textmate from creating ._ files ]]></title>
-    <link href="http://mattlangtree.com.au/2009/01/09/textmate-creating-dot-underscore-files/"/>
+    <link href="http://mattlangtree.github.com/2009/01/09/textmate-creating-dot-underscore-files/"/>
     <updated>2009-01-09T02:34:27+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/01/09/textmate-creating-dot-underscore-files</id>
+    <id>http://mattlangtree.github.com/2009/01/09/textmate-creating-dot-underscore-files</id>
     <content type="html"><![CDATA[<p>Textmate, by default creates annoying hidden '._' files that litter your svn
 status listings. These resource fork files will store cursor position,
 bookmarks and text folding as metadata. It is however possible to disable

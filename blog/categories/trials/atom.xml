@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Trials | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/trials/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/trials/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Camping + Trials near Lake Barrine (Updated)]]></title>
-    <link href="http://mattlangtree.com.au/2009/07/20/camping-trials-near-lake-barinne/"/>
+    <link href="http://mattlangtree.github.com/2009/07/20/camping-trials-near-lake-barinne/"/>
     <updated>2009-07-20T11:33:43+10:00</updated>
-    <id>http://mattlangtree.com.au/2009/07/20/camping-trials-near-lake-barinne</id>
+    <id>http://mattlangtree.github.com/2009/07/20/camping-trials-near-lake-barinne</id>
     <content type="html"><![CDATA[<p>On the long weekend (Cairns Show Holiday) of 17th July - 19 July 2009 ten of
 us (and 15 motorbikes!) went up to a secret location near Lake Barinne for a
 weekend of camping and motorbike riding.</p>

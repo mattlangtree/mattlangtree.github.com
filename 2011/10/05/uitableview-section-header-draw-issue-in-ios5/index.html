@@ -19,7 +19,7 @@ have implemented UITableViewDelegate&#8217;s following two delegate &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mattlangtree.com.au/2011/10/05/uitableview-section-header-draw-issue-in-ios5">
+  <link rel="canonical" href="http://mattlangtree.github.com/2011/10/05/uitableview-section-header-draw-issue-in-ios5">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -49,17 +49,20 @@ have implemented UITableViewDelegate&#8217;s following two delegate &hellip;">
 <body   >
   <header role="banner"><hgroup>
   <h1><a href="/">Matt Langtree</a></h1>
+  
+    <h2>Another blog..</h2>
+  
 </hgroup>
 
 </header>
-  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
   
 <form action="http://google.com/search" method="get">
   <fieldset role="search">
-    <input type="hidden" name="q" value="site:mattlangtree.com.au" />
+    <input type="hidden" name="q" value="site:mattlangtree.github.com" />
     <input class="search" type="text" name="q" results="0" placeholder="Search"/>
   </fieldset>
 </form>
@@ -67,12 +70,9 @@ have implemented UITableViewDelegate&#8217;s following two delegate &hellip;">
 <ul class="main-navigation">
   <li><a href="/">Blog</a></li>
   <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about-matt/">About Matt</a></li>
-  <li><a href="/contact/">Contact</a></li>
-  <li><a href="/projects/">Projects</a></li>
 </ul>
 
-</nav> -->
+</nav>
   <div id="main">
     <div id="content">
       <div>
@@ -158,7 +158,7 @@ being drawn, like so:</p>
 <span class='line-number'>31</span>
 <span class='line-number'>32</span>
 <span class='line-number'>33</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span> <span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">heightForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">section</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">CGFloat</span><span class="p">)</span> <span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">heightForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">section</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="c1">// This is the new important bit for iOS5.</span>
 </span><span class='line'>  <span class="k">if</span> <span class="p">([</span><span class="n">self</span> <span class="n">currentViewNeedsTableHeaders</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
@@ -168,7 +168,7 @@ being drawn, like so:</p>
 </span><span class='line'>  <span class="k">return</span> <span class="mi">45</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'><span class="c1">// Will produce a green view with a black bottom separator line.</span>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span> <span class="nl">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="n">tableView</span> <span class="nl">viewForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="n">section</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="n">UIView</span> <span class="o">*</span><span class="p">)</span> <span class="nf">tableView:</span><span class="p">(</span><span class="n">UITableView</span> <span class="o">*</span><span class="p">)</span><span class="nv">tableView</span> <span class="nf">viewForHeaderInSection:</span><span class="p">(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">section</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="k">if</span> <span class="p">([</span><span class="n">self</span> <span class="n">currentViewNeedsTableHeaders</span><span class="p">]</span> <span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>      <span class="k">return</span> <span class="nb">nil</span><span class="p">;</span>
@@ -187,7 +187,7 @@ being drawn, like so:</p>
 </span><span class='line'>  <span class="p">[</span><span class="n">headerView</span> <span class="nl">addSubview:</span><span class="n">headerLabel</span><span class="p">];</span>
 </span><span class='line'>  <span class="k">return</span> <span class="n">headerView</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
-</span><span class='line'><span class="o">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="n">currentViewNeedsTableHeaders</span>
+</span><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">BOOL</span><span class="p">)</span><span class="nf">currentViewNeedsTableHeaders</span>
 </span><span class='line'><span class="p">{</span>
 </span><span class='line'>  <span class="k">return</span> <span class="p">([</span><span class="n">self</span><span class="p">.</span><span class="n">someProperty</span> <span class="nl">isEqualToString:</span><span class="s">@&quot;parrot&quot;</span><span class="p">])</span> <span class="o">?</span> <span class="nb">FALSE</span> <span class="o">:</span> <span class="nb">TRUE</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
@@ -223,7 +223,7 @@ being drawn, like so:</p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mattlangtree.com.au/2011/10/05/uitableview-section-header-draw-issue-in-ios5/" data-via="mattlangtree" data-counturl="http://mattlangtree.com.au/2011/10/05/uitableview-section-header-draw-issue-in-ios5/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mattlangtree.github.com/2011/10/05/uitableview-section-header-draw-issue-in-ios5/" data-via="mattlangtree" data-counturl="http://mattlangtree.github.com/2011/10/05/uitableview-section-header-draw-issue-in-ios5/" >Tweet</a>
   
   
   

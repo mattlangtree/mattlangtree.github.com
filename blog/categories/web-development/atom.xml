@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Web Development | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/web-development/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/web-development/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[shrt.tw]]></title>
-    <link href="http://mattlangtree.com.au/2009/07/12/shrttw/"/>
+    <link href="http://mattlangtree.github.com/2009/07/12/shrttw/"/>
     <updated>2009-07-12T12:30:42+10:00</updated>
-    <id>http://mattlangtree.com.au/2009/07/12/shrttw</id>
+    <id>http://mattlangtree.github.com/2009/07/12/shrttw</id>
     <content type="html"><![CDATA[<p>A new project that I'm currently working on is <a href="http://shrt.tw/">SHRT.TW</a>.
 This one I'm keeping pretty quiet for now.. If you are a web/application
 developer or a mac user expect shrt.tw to be an integral part of your daily
@@ -32,9 +32,9 @@ one.</p>
   
   <entry>
     <title type="html"><![CDATA[WhatTheFont on iPhone]]></title>
-    <link href="http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone/"/>
+    <link href="http://mattlangtree.github.com/2009/02/12/whatthefont-now-on-iphone/"/>
     <updated>2009-02-12T01:54:37+11:00</updated>
-    <id>http://mattlangtree.com.au/2009/02/12/whatthefont-now-on-iphone</id>
+    <id>http://mattlangtree.github.com/2009/02/12/whatthefont-now-on-iphone</id>
     <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/2009/02/picture-5.png" alt="picture-5" />Sites that require a file upload to
 occur as the main functionality, are a little restricted on the iPhone. The
 folks at myfonts.com have circumvented this by offering an <a href="http://new.myfonts.com/WhatTheFont/iPhone/">iPhone

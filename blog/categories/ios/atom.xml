@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: iOS | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/ios/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/ios/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[iPad large table data [sample project]]]></title>
-    <link href="http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec/"/>
+    <link href="http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec/"/>
     <updated>2011-09-19T13:08:03+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/09/19/ipad-xml-large-dataset-projec</id>
+    <id>http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec</id>
     <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/IMG_1268-1024x445.jpg" alt="" /></p>
 
 <p>So you have a large XML feed with lots of rows/columns that you want to turn
@@ -51,9 +51,9 @@ Additionally, you can use this as a reference for future iPad web apps.</p>
   
   <entry>
     <title type="html"><![CDATA[DCIntrospect - Debugging views in iOS (Update: Video)]]></title>
-    <link href="http://mattlangtree.com.au/2011/09/19/dcintrospect/"/>
+    <link href="http://mattlangtree.github.com/2011/09/19/dcintrospect/"/>
     <updated>2011-09-19T04:12:06+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/09/19/dcintrospect</id>
+    <id>http://mattlangtree.github.com/2011/09/19/dcintrospect</id>
     <content type="html"><![CDATA[<p><a href="http://mattlangtree.com.au/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.com.au/wp-content/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
 
 <p>From Pat's project description:</p>
@@ -114,9 +114,9 @@ animationRepeatCount: 0
   
   <entry>
     <title type="html"><![CDATA[iOS libraries and frameworks I use — September 2011]]></title>
-    <link href="http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011/"/>
+    <link href="http://mattlangtree.github.com/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011/"/>
     <updated>2011-09-15T05:17:28+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011</id>
+    <id>http://mattlangtree.github.com/2011/09/15/ios-libraries-and-frameworks-i-use-e28094-september-2011</id>
     <content type="html"><![CDATA[<p>When I started out learning iOS application development I wished that there
 was a list of libraries that were proven to work well, were well documented
 and had great coverage on <a href="http://stackoverflow.com/questions/tagged/ios">Stack
@@ -167,9 +167,9 @@ let me know in the comments.</p>
   
   <entry>
     <title type="html"><![CDATA[Restarting a video in MPMoviePlayerController]]></title>
-    <link href="http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/"/>
+    <link href="http://mattlangtree.github.com/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/"/>
     <updated>2011-09-09T00:49:28+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller</id>
+    <id>http://mattlangtree.github.com/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller</id>
     <content type="html"><![CDATA[<p>I'm working on a project where the standard controls provided by
 MPMoviePlayerController aren't matching the existing styling of the app
 design. I need to provide a custom rewind button for the movie I'm auto-

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Blog | Matt Langtree]]></title>
-  <link href="http://mattlangtree.com.au/blog/categories/blog/atom.xml" rel="self"/>
-  <link href="http://mattlangtree.com.au/"/>
-  <updated>2012-01-14T23:28:49+11:00</updated>
-  <id>http://mattlangtree.com.au/</id>
+  <link href="http://mattlangtree.github.com/blog/categories/blog/atom.xml" rel="self"/>
+  <link href="http://mattlangtree.github.com/"/>
+  <updated>2012-06-06T16:57:57+10:00</updated>
+  <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[MySQL Lion not working]]></title>
-    <link href="http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working/"/>
+    <link href="http://mattlangtree.github.com/2011/08/02/mysql-lion-not-working/"/>
     <updated>2011-08-02T02:12:24+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/08/02/mysql-lion-not-working</id>
+    <id>http://mattlangtree.github.com/2011/08/02/mysql-lion-not-working</id>
     <content type="html"><![CDATA[<p>If you are like me you used the default MySQL, Apache and PHP provided with
 Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for you.</p>
 
@@ -52,9 +52,9 @@ Fingers Crossed.</p>
   
   <entry>
     <title type="html"><![CDATA[First Screencast - Sequel Pro getting started]]></title>
-    <link href="http://mattlangtree.com.au/2011/06/11/first-screencast-sequel-pro-getting-started/"/>
+    <link href="http://mattlangtree.github.com/2011/06/11/first-screencast-sequel-pro-getting-started/"/>
     <updated>2011-06-11T08:34:06+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/06/11/first-screencast-sequel-pro-getting-started</id>
+    <id>http://mattlangtree.github.com/2011/06/11/first-screencast-sequel-pro-getting-started</id>
     <content type="html"><![CDATA[<p>This is my first attempt at screencasting, so go easy. The motivation behind
 this was a general consensus that the <a href="http://sequelpro.com/release-notes.html">release notes for Sequel
 Pro</a> releases were consistently long
@@ -77,9 +77,9 @@ know what you think.</li>
   
   <entry>
     <title type="html"><![CDATA[XCode 4 shortcuts]]></title>
-    <link href="http://mattlangtree.com.au/2011/04/07/xcode-4-shortcuts/"/>
+    <link href="http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts/"/>
     <updated>2011-04-07T02:16:37+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/04/07/xcode-4-shortcuts</id>
+    <id>http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts</id>
     <content type="html"><![CDATA[<p><img src="http://mattlangtree.com.au/wp-content/uploads/Xcode-2-dragged.jpg" alt="" /></p>
 
 <p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="http://mattlangtree.com.au/wp-content/uploads/Xcode_4_Shortcuts_bw-2page.pdf">Local
@@ -89,9 +89,9 @@ Copy</a></p>
   
   <entry>
     <title type="html"><![CDATA[Medium Stack iPhone App]]></title>
-    <link href="http://mattlangtree.com.au/2011/04/03/medium-stack-iphone-app/"/>
+    <link href="http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app/"/>
     <updated>2011-04-03T22:23:18+10:00</updated>
-    <id>http://mattlangtree.com.au/2011/04/03/medium-stack-iphone-app</id>
+    <id>http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app</id>
     <content type="html"><![CDATA[<p><a href="http://mattlangtree.com.au/wp-content/uploads/medium-stack-iphone.png"><img src="http://mattlangtree.com.au/wp-content/uploads/medium-stack-iphone.png" alt="hide" /></a>
 The new iPhone App for Medium Stack is in Alpha testing stages, as
 the final features are added to the app. Anybody who is willing to both test
