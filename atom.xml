@@ -4,7 +4,7 @@
   <title><![CDATA[Matt Langtree]]></title>
   <link href="http://mattlangtree.github.com/atom.xml" rel="self"/>
   <link href="http://mattlangtree.github.com/"/>
-  <updated>2012-06-06T17:59:03+10:00</updated>
+  <updated>2012-06-12T11:59:25+10:00</updated>
   <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
@@ -142,9 +142,9 @@ height of 0 for the section header.</p>
 <p>If you don&#8217;t follow this rule, you may end up with an empty section header
 being drawn, like so:</p>
 
-<p><img src="http://mattlangtree.github.com/wp-content/uploads/ios4-example-300x116.png"></p>
+<p><img src="http://mattlangtree.github.com/wp-content/ios4-example-300x116.png"></p>
 
-<p><a href="http://mattlangtree.github.com/wp-content/uploads/ios5-example.png"><img src="http://mattlangtree.github.com/wp-content/uploads/ios5-example-300x166.png" alt="" /></a></p>
+<p><a href="http://mattlangtree.github.com/wp-content/ios5-example.png"><img src="http://mattlangtree.github.com/wp-content/ios5-example-300x166.png" alt="" /></a></p>
 
 <figure class='code'><figcaption><span>New UITableView code    </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -222,7 +222,7 @@ being drawn, like so:</p>
     <link href="http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec/"/>
     <updated>2011-09-19T13:08:03+10:00</updated>
     <id>http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec</id>
-    <content type="html"><![CDATA[<p><img src="http://mattlangtree.github.com/wp-content/uploads/IMG_1268-1024x445.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.github.com/wp-content/IMG_1268-1024x445.jpg" alt="" /></p>
 
 <p>So you have a large XML feed with lots of rows/columns that you want to turn
 into an iPad app. Let&#8217;s see what options we have for presenting this data.</p>
@@ -242,7 +242,7 @@ events at venues</a>.</li>
 </ol>
 
 
-<p>{ % img http://mattlangtree.github.com/wp-content/uploads/app-breakdown1.jpg % }</p>
+<p>{ % img http://mattlangtree.github.com/wp-content/app-breakdown1.jpg % }</p>
 
 <p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
 isn&#8217;t modelling a particularly large dataset, but it&#8217;s a good start.
@@ -258,7 +258,7 @@ Additionally, you can use this as a reference for future iPad web apps.</p>
     <link href="http://mattlangtree.github.com/2011/09/19/dcintrospect/"/>
     <updated>2011-09-19T04:12:06+10:00</updated>
     <id>http://mattlangtree.github.com/2011/09/19/dcintrospect</id>
-    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.github.com/wp-content/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.github.com/wp-content/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
 
 <p>From Pat&#8217;s project description:</p>
 
@@ -387,7 +387,7 @@ weight Core Data wrapper, let me know in the comments.</p>
 <p>If you have tried any of these and have found an alternative that works better
 let me know in the comments.</p>
 
-<p><img src="http://mattlangtree.github.com/wp-content/uploads/3.png" alt="Images" /></p>
+<p><img src="http://mattlangtree.github.com/wp-content/3.png" alt="Images" /></p>
 ]]></content>
   </entry>
   
@@ -407,7 +407,7 @@ log in/out of your machine on a regular basis that you follow my lead  — At
 least until the option of installing an SSD in your machine is a feasible
 option (a highly recommended option).</p>
 
-<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-14-at-9.42.21-AM.png"><img src="http://mattlangtree.github.com/wp-content/uploads/Screen-Shot-2011-09-14-at-9.42.21-AM.png" alt="" /></a></p>
+<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-14-at-9.42.21-AM.png"><img src="http://mattlangtree.github.com/wp-content/Screen-Shot-2011-09-14-at-9.42.21-AM.png" alt="" /></a></p>
 ]]></content>
   </entry>
   
@@ -530,9 +530,9 @@ know what you think.</li>
     <link href="http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts/"/>
     <updated>2011-04-07T02:16:37+10:00</updated>
     <id>http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts</id>
-    <content type="html"><![CDATA[<p><img src="http://mattlangtree.github.com/wp-content/uploads/Xcode-2-dragged.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p><img src="http://mattlangtree.github.com/wp-content/Xcode-2-dragged.jpg" alt="" /></p>
 
-<p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="http://mattlangtree.github.com/wp-content/uploads/Xcode_4_Shortcuts_bw-2page.pdf">Local
+<p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="http://mattlangtree.github.com/wp-content/Xcode_4_Shortcuts_bw-2page.pdf">Local
 Copy</a></p>
 ]]></content>
   </entry>
@@ -542,7 +542,7 @@ Copy</a></p>
     <link href="http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app/"/>
     <updated>2011-04-03T22:23:18+10:00</updated>
     <id>http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app</id>
-    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-content/uploads/medium-stack-iphone.png"><img src="http://mattlangtree.github.com/wp-content/uploads/medium-stack-iphone.png" alt="hide" /></a>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-content/medium-stack-iphone.png"><img src="http://mattlangtree.github.com/wp-content/medium-stack-iphone.png" alt="hide" /></a>
 The new iPhone App for Medium Stack is in Alpha testing stages, as
 the final features are added to the app. Anybody who is willing to both test
 and provide bug reports for this new iPhone app should contact me at <a href="mailto:info@northofthree.com?subject=Interested+in+testing+the+Medium+S%0Atack+iPhone+app">North of
@@ -578,10 +578,10 @@ abandoned warehouse, by himself.</p>
 the camera along. Along the way we got a small bout of snow, we experienced 1
 degree temperature and had a &#8220;run in&#8221; with a kangaroo&#8230;</p>
 
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6510-200x200.jpg" alt="img_6510" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6557-200x200.jpg" alt="img_6557" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6537-200x200.jpg" alt="img_6537" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/p1000584-200x200.jpg" alt="p1000584" /></a></p>
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6510-200x200.jpg" alt="img_6510" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6557-200x200.jpg" alt="img_6557" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6537-200x200.jpg" alt="img_6537" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622181080403/"><img src="http://mattlangtree.github.com/wp-content/2009/09/p1000584-200x200.jpg" alt="p1000584" /></a></p>
 
 <p>Have a look through the photos and leave a comment on Flickr or on the blog.</p>
 ]]></content>
@@ -598,10 +598,10 @@ haven&#8217;t labeled any of the photos yet :(</p>
 <p>But here they are, photos from Mooloolaba to Canberra. There is plenty of
 video still to come :P</p>
 
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_0845-200x200.jpg" alt="img_0845" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_0848-200x200.jpg" alt="img_0848" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6366-200x200.jpg" alt="img_6366" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_0860-200x200.jpg" alt="img_0860" /></a></p>
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_0845-200x200.jpg" alt="img_0845" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_0848-200x200.jpg" alt="img_0848" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6366-200x200.jpg" alt="img_6366" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622286809120/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_0860-200x200.jpg" alt="img_0860" /></a></p>
 
 <p>Here&#8217;s the quick itinerary of my last few days..</p>
 
@@ -625,10 +625,10 @@ Mooloolaba where I was staying. I&#8217;ve decided to post the Townsville-Mackay
 Mackay-Maryborough and Maryborough-Mooloolaba photos (Wow, did I get all the
 names right?) whilst I get the video ready.</p>
 
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6187-200x200.jpg" alt="img_6187" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6198-200x200.jpg" alt="img_6198" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6226-200x200.jpg" alt="img_6226" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/09/img_6250-200x200.jpg" alt="img_6250" /></a></p>
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6187-200x200.jpg" alt="img_6187" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6198-200x200.jpg" alt="img_6198" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6226-200x200.jpg" alt="img_6226" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622223702660/"><img src="http://mattlangtree.github.com/wp-content/2009/09/img_6250-200x200.jpg" alt="img_6250" /></a></p>
 ]]></content>
   </entry>
   
@@ -657,10 +657,10 @@ I asked my awesome dad to give the car a once over and check the essentials.</p>
     <content type="html"><![CDATA[<p>Was up bright and early on Saturday morning (22Aug09) to climb the local
 &#8216;Mordor&#8221; - Walsh&#8217;s Pyramid.</p>
 
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/08/img_6129-200x200.jpg" alt="img_6129" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/08/img_6133-200x200.jpg" alt="img_6133" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/08/img_6126-200x200.jpg" alt="img_6126" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/uploads/2009/08/img_4979-200x200.jpg" alt="img_4979" /></a></p>
+<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/2009/08/img_6129-200x200.jpg" alt="img_6129" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/2009/08/img_6133-200x200.jpg" alt="img_6133" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/2009/08/img_6126-200x200.jpg" alt="img_6126" /></a>
+<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/wp-content/2009/08/img_4979-200x200.jpg" alt="img_4979" /></a></p>
 ]]></content>
   </entry>
   
