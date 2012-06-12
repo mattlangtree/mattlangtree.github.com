@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | Matt Langtree]]></title>
   <link href="http://mattlangtree.github.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://mattlangtree.github.com/"/>
-  <updated>2012-06-12T11:59:25+10:00</updated>
+  <updated>2012-06-12T12:45:12+10:00</updated>
   <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
@@ -18,7 +18,7 @@
     <link href="http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec/"/>
     <updated>2011-09-19T13:08:03+10:00</updated>
     <id>http://mattlangtree.github.com/2011/09/19/ipad-xml-large-dataset-projec</id>
-    <content type="html"><![CDATA[<p><img src="http://mattlangtree.github.com/wp-content/IMG_1268-1024x445.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p><img src="/wp-content/IMG_1268-1024x445.jpg" alt="" /></p>
 
 <p>So you have a large XML feed with lots of rows/columns that you want to turn
 into an iPad app. Let's see what options we have for presenting this data.</p>
@@ -38,7 +38,7 @@ events at venues</a>.</li>
 </ol>
 
 
-<p>{ % img http://mattlangtree.github.com/wp-content/app-breakdown1.jpg % }</p>
+<p>{ % img /wp-content/app-breakdown1.jpg % }</p>
 
 <p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
 isn't modelling a particularly large dataset, but it's a good start.
@@ -54,7 +54,7 @@ Additionally, you can use this as a reference for future iPad web apps.</p>
     <link href="http://mattlangtree.github.com/2011/09/19/dcintrospect/"/>
     <updated>2011-09-19T04:12:06+10:00</updated>
     <id>http://mattlangtree.github.com/2011/09/19/dcintrospect</id>
-    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="http://mattlangtree.github.com/wp-content/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
+    <content type="html"><![CDATA[<p><a href="http://mattlangtree.github.com/wp-%0Acontent/uploads/Screen-Shot-2011-09-19-at-2.00.08-PM.png"><img src="/wp-content/Screen-Shot-2011-09-19-at-2.00.08-PM-159x300.png" alt="" /></a><a href="https://github.com/domesticcatsoftware/DCIntrospect">DCIntrospect</a> is a tool that I have found to be invaluable to my work/personal projects recently.</p>
 
 <p>From Pat's project description:</p>
 
@@ -161,7 +161,7 @@ weight Core Data wrapper, let me know in the comments.</p>
 <p>If you have tried any of these and have found an alternative that works better
 let me know in the comments.</p>
 
-<p><img src="http://mattlangtree.github.com/wp-content/3.png" alt="Images" /></p>
+<p><img src="/wp-content/3.png" alt="Images" /></p>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Matt Langtree]]></title>
   <link href="http://mattlangtree.github.com/atom.xml" rel="self"/>
   <link href="http://mattlangtree.github.com/"/>
-  <updated>2012-06-12T11:59:25+10:00</updated>
+  <updated>2012-06-12T12:45:12+10:00</updated>
   <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
@@ -242,7 +242,7 @@ events at venues</a>.</li>
 </ol>
 
 
-<p>{ % img http://mattlangtree.github.com/wp-content/app-breakdown1.jpg % }</p>
+<p>{ % img /wp-content/app-breakdown1.jpg % }</p>
 
 <p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
 isn&#8217;t modelling a particularly large dataset, but it&#8217;s a good start.
