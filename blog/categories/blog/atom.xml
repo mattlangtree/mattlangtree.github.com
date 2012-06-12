@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Blog | Matt Langtree]]></title>
   <link href="http://mattlangtree.github.com/blog/categories/blog/atom.xml" rel="self"/>
   <link href="http://mattlangtree.github.com/"/>
-  <updated>2012-06-12T12:50:31+10:00</updated>
+  <updated>2012-06-12T16:14:27+10:00</updated>
   <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
@@ -80,9 +80,9 @@ know what you think.</li>
     <link href="http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts/"/>
     <updated>2011-04-07T02:16:37+10:00</updated>
     <id>http://mattlangtree.github.com/2011/04/07/xcode-4-shortcuts</id>
-    <content type="html"><![CDATA[<p><img src="/wp-content/Xcode-2-dragged.jpg" alt="" /></p>
+    <content type="html"><![CDATA[<p><img src="/images/wp-content/Xcode-2-dragged.jpg" alt="" /></p>
 
-<p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="/wp-content/Xcode_4_Shortcuts_bw-2page.pdf">Local
+<p><a href="http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf">http://boredzo.org/stuph/Xcode_4_Shortcuts_bw-2page.pdf</a> | <a href="/images/wp-content/Xcode_4_Shortcuts_bw-2page.pdf">Local
 Copy</a></p>
 ]]></content>
   </entry>
@@ -92,7 +92,7 @@ Copy</a></p>
     <link href="http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app/"/>
     <updated>2011-04-03T22:23:18+10:00</updated>
     <id>http://mattlangtree.github.com/2011/04/03/medium-stack-iphone-app</id>
-    <content type="html"><![CDATA[<p><a href="/wp-content/medium-stack-iphone.png"><img src="/wp-content/medium-stack-iphone.png" alt="hide" /></a>
+    <content type="html"><![CDATA[<p><a href="/images/wp-content/medium-stack-iphone.png"><img src="/images/wp-content/medium-stack-iphone.png" alt="hide" /></a>
 The new iPhone App for Medium Stack is in Alpha testing stages, as
 the final features are added to the app. Anybody who is willing to both test
 and provide bug reports for this new iPhone app should contact me at <a href="mailto:info@northofthree.com?subject=Interested+in+testing+the+Medium+S%0Atack+iPhone+app">North of
