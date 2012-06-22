@@ -9,7 +9,7 @@
   <meta name="author" content="Matt Langtree">
 
   
-  <meta name="description" content="macdrifter on Developers, A Love Story: If I like a developer I buy their wares just to support their work. When I say “I like a developer” I don’t &hellip;">
+  <meta name="description" content="One of my favourite beats is &#8220;Gone&#8221; by Kanye West on the Late Registration album. Feel free to ignore the rap if that isn&#8217;t your &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,44 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/06/22/musical-excellence-in-the-key-of-rap/">Musical Excellence in the Key of Rap</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-22T17:19:00+10:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of my favourite beats is <a href="http://itunes.apple.com/us/album/late-registration/id79483267">&#8220;Gone&#8221; by Kanye West</a> on the <a href="http://en.wikipedia.org/wiki/Late_Registration">Late Registration</a> album. Feel free to ignore the rap if that isn&#8217;t your thing, but listen to the musical progression and see for yourself.</p>
+
+<blockquote><p>Some of the most elaborate orchestral arrangement expressed on the entire album is contained within its closing track &#8220;Gone.&#8221; The composition begins with a vocal sample of &#8220;It&#8217;s Too Late&#8221; by Otis Redding and a two-chord piano ostinato, followed by a simplistic funk beat. As the song progresses, its structure gradually morphs and develops more and more musicality. Overtime, the composition assumes ten violins, four violas and four cellos in the midst of verses, all of which initially come in brief staccato bursts that simply punctuate the rhythm but eventually expand and consolidate into a fully formed string section by the arrival of the harmonic choruses. After its third verse, the song enters an instrumental passage before returning with a fourth verse from West, where the rise and fall of his voice is intricately emulated by the fluctuation of the string orchestra.</p></blockquote>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -464,7 +502,7 @@ events at venues</a>.</li>
 </ol>
 
 
-<p>{ % img /images/wp-content/app-breakdown1.jpg % }</p>
+<p>{% img /images/wp-content/app-breakdown1.jpg % }</p>
 
 <p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
 isn&#8217;t modelling a particularly large dataset, but it&#8217;s a good start.
@@ -718,78 +756,6 @@ option (a highly recommended option).</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/">Restarting a Video in MPMoviePlayerController</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-09-09T00:49:28+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>I&#8217;m working on a project where the standard controls provided by
-MPMoviePlayerController aren&#8217;t matching the existing styling of the app
-design. I need to provide a custom rewind button for the movie I&#8217;m auto-
-playing for the user. When the video finishes it needs to hide the modal movie
-view controller, and I&#8217;m handling this with the
-MPMoviePlayerPlaybackDidFinishNotification notification. The best way I can
-think of doing the rewind without triggering the view to dismiss is with the
-following code..</p>
-
-<figure class='code'><figcaption><span>Restart video in iOS   </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-</pre></td><td class='code'><pre><code class='obj-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">restartVideo</span>
-</span><span class='line'><span class="p">{</span>
-</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">removeObserver:</span><span class="n">self</span>
-</span><span class='line'>                                                    <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
-</span><span class='line'>                                                  <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">stop</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">play</span><span class="p">];</span>
-</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span>
-</span><span class='line'>                                             <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">moviePlayBackDidFinish:</span><span class="p">)</span>
-</span><span class='line'>                                                 <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
-</span><span class='line'>                                               <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p><strong>Update:</strong> Thanks to @avenjamin for suggesting that I call the method -restartVideo rather than -rewindVideo as the meaning was slightly incorrect.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -814,6 +780,10 @@ following code..</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/06/22/musical-excellence-in-the-key-of-rap/">Musical Excellence in the key of Rap</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/01/14/what-drives-me-to-develop-software/">What drives me to develop software</a>
       </li>
     
@@ -827,10 +797,6 @@ following code..</p>
     
       <li class="post">
         <a href="/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion/">Self-signed SSL Certificate on Mac OS X Lion</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/10/05/uitableview-section-header-draw-issue-in-ios5/">UITableView section header draw issue in iOS5</a>
       </li>
     
   </ul>

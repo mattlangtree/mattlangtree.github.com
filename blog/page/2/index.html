@@ -9,8 +9,8 @@
   <meta name="author" content="Matt Langtree">
 
   
-  <meta name="description" content="If you are like me you used the default MySQL, Apache and PHP provided with
-Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for &hellip;">
+  <meta name="description" content="I&#8217;m working on a project where the standard controls provided by
+MPMoviePlayerController aren&#8217;t matching the existing styling of the app &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,78 @@ Mac OS X Snow Leopard. When you upgraded to Lion it most likely broke for &helli
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/09/09/rewinding-a-video-in-mpmovieplayercontroller/">Restarting a Video in MPMoviePlayerController</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-09-09T00:49:28+10:00" pubdate data-updated="true">Sep 9<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I&#8217;m working on a project where the standard controls provided by
+MPMoviePlayerController aren&#8217;t matching the existing styling of the app
+design. I need to provide a custom rewind button for the movie I&#8217;m auto-
+playing for the user. When the video finishes it needs to hide the modal movie
+view controller, and I&#8217;m handling this with the
+MPMoviePlayerPlaybackDidFinishNotification notification. The best way I can
+think of doing the rewind without triggering the view to dismiss is with the
+following code..</p>
+
+<figure class='code'><figcaption><span>Restart video in iOS   </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class='obj-c'><span class='line'><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">restartVideo</span>
+</span><span class='line'><span class="p">{</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">removeObserver:</span><span class="n">self</span>
+</span><span class='line'>                                                    <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
+</span><span class='line'>                                                  <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">stop</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[</span><span class="n">mp</span> <span class="n">play</span><span class="p">];</span>
+</span><span class='line'>    <span class="p">[[</span><span class="n">NSNotificationCenter</span> <span class="n">defaultCenter</span><span class="p">]</span> <span class="nl">addObserver:</span><span class="n">self</span>
+</span><span class='line'>                                             <span class="nl">selector:</span><span class="k">@selector</span><span class="p">(</span><span class="nl">moviePlayBackDidFinish:</span><span class="p">)</span>
+</span><span class='line'>                                                 <span class="nl">name:</span><span class="n">MPMoviePlayerPlaybackDidFinishNotification</span>
+</span><span class='line'>                                               <span class="nl">object:</span><span class="nb">nil</span><span class="p">];</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>Update:</strong> Thanks to @avenjamin for suggesting that I call the method -restartVideo rather than -rewindVideo as the meaning was slightly incorrect.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -514,48 +586,6 @@ I asked my awesome dad to give the car a once over and check the essentials.</p>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/28/climbing-the-walshs-pyramid/">Climbing the Walsh&#8217;s Pyramid</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-28T11:50:19+10:00" pubdate data-updated="true">Aug 28<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Was up bright and early on Saturday morning (22Aug09) to climb the local
-&#8216;Mordor&#8221; - Walsh&#8217;s Pyramid.</p>
-
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="/images/wp-content/2009/08/img_6129-200x200.jpg" alt="img_6129" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="/images/wp-content/2009/08/img_6133-200x200.jpg" alt="img_6133" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="/images/wp-content/2009/08/img_6126-200x200.jpg" alt="img_6126" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="/images/wp-content/2009/08/img_4979-200x200.jpg" alt="img_4979" /></a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/3/">&larr; Older</a>
@@ -582,6 +612,10 @@ I asked my awesome dad to give the car a once over and check the essentials.</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/06/22/musical-excellence-in-the-key-of-rap/">Musical Excellence in the key of Rap</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/01/14/what-drives-me-to-develop-software/">What drives me to develop software</a>
       </li>
     
@@ -595,10 +629,6 @@ I asked my awesome dad to give the car a once over and check the essentials.</p>
     
       <li class="post">
         <a href="/2011/10/11/self-signed-ssl-certificate-on-mac-os-x-lion/">Self-signed SSL Certificate on Mac OS X Lion</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/10/05/uitableview-section-header-draw-issue-in-ios5/">UITableView section header draw issue in iOS5</a>
       </li>
     
   </ul>

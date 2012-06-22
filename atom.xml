@@ -4,7 +4,7 @@
   <title><![CDATA[Matt Langtree]]></title>
   <link href="http://mattlangtree.github.com/atom.xml" rel="self"/>
   <link href="http://mattlangtree.github.com/"/>
-  <updated>2012-06-12T16:18:30+10:00</updated>
+  <updated>2012-06-22T17:26:55+10:00</updated>
   <id>http://mattlangtree.github.com/</id>
   <author>
     <name><![CDATA[Matt Langtree]]></name>
@@ -12,6 +12,17 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Musical Excellence in the key of Rap]]></title>
+    <link href="http://mattlangtree.github.com/2012/06/22/musical-excellence-in-the-key-of-rap/"/>
+    <updated>2012-06-22T17:19:00+10:00</updated>
+    <id>http://mattlangtree.github.com/2012/06/22/musical-excellence-in-the-key-of-rap</id>
+    <content type="html"><![CDATA[<p>One of my favourite beats is <a href="http://itunes.apple.com/us/album/late-registration/id79483267">&#8220;Gone&#8221; by Kanye West</a> on the <a href="http://en.wikipedia.org/wiki/Late_Registration">Late Registration</a> album. Feel free to ignore the rap if that isn&#8217;t your thing, but listen to the musical progression and see for yourself.</p>
+
+<blockquote><p>Some of the most elaborate orchestral arrangement expressed on the entire album is contained within its closing track &#8220;Gone.&#8221; The composition begins with a vocal sample of &#8220;It&#8217;s Too Late&#8221; by Otis Redding and a two-chord piano ostinato, followed by a simplistic funk beat. As the song progresses, its structure gradually morphs and develops more and more musicality. Overtime, the composition assumes ten violins, four violas and four cellos in the midst of verses, all of which initially come in brief staccato bursts that simply punctuate the rhythm but eventually expand and consolidate into a fully formed string section by the arrival of the harmonic choruses. After its third verse, the song enters an instrumental passage before returning with a fourth verse from West, where the rise and fall of his voice is intricately emulated by the fluctuation of the string orchestra.</p></blockquote>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[What drives me to develop software]]></title>
@@ -242,7 +253,7 @@ events at venues</a>.</li>
 </ol>
 
 
-<p>{ % img /images/wp-content/app-breakdown1.jpg % }</p>
+<p>{% img /images/wp-content/app-breakdown1.jpg % }</p>
 
 <p>The example project <a href="https://github.com/mattlangtree/DataTable">DataTable</a>
 isn&#8217;t modelling a particularly large dataset, but it&#8217;s a good start.
@@ -646,21 +657,6 @@ the daylight away from me. At the last minute before I thought I was leaving,
 I asked my awesome dad to give the car a once over and check the essentials.</p>
 
 <p>Oil .. OK, Wiper Fluid ..OK, Tyres .. FAIL!</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Climbing the Walsh's Pyramid]]></title>
-    <link href="http://mattlangtree.github.com/2009/08/28/climbing-the-walshs-pyramid/"/>
-    <updated>2009-08-28T11:50:19+10:00</updated>
-    <id>http://mattlangtree.github.com/2009/08/28/climbing-the-walshs-pyramid</id>
-    <content type="html"><![CDATA[<p>Was up bright and early on Saturday morning (22Aug09) to climb the local
-&#8216;Mordor&#8221; - Walsh&#8217;s Pyramid.</p>
-
-<p><a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/images/wp-content/2009/08/img_6129-200x200.jpg" alt="img_6129" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/images/wp-content/2009/08/img_6133-200x200.jpg" alt="img_6133" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/images/wp-content/2009/08/img_6126-200x200.jpg" alt="img_6126" /></a>
-<a href="http://www.flickr.com/photos/mattlangtree/sets/72157622163555712/"><img src="http://mattlangtree.github.com/images/wp-content/2009/08/img_4979-200x200.jpg" alt="img_4979" /></a></p>
 ]]></content>
   </entry>
   
